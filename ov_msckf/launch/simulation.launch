@@ -41,6 +41,10 @@
     <arg name="path_state_std"  default="$(find ov_eval)/data/sim/state_deviation.txt" />
     <arg name="path_state_gt"   default="$(find ov_eval)/data/sim/state_groundtruth.txt" />
 
+    <!-- if we should launch rviz at the same time -->
+    <arg name="dorviz"      default="false" />
+    <arg name="path_rviz"   default="$(find ov_msckf)/launch/display.rviz" />
+
     <!-- ================================================================ -->
     <!-- ================================================================ -->
 
@@ -111,5 +115,9 @@
         </node>
     </group>
 
+    <!-- rviz visualization -->
+    <group if="$(arg dorviz)">
+        <node name="rviz" pkg="rviz" type="rviz" args="-d $(arg path_rviz)" />
+    </group>
 
 </launch>

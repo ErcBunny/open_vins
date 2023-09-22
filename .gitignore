@@ -8,3 +8,5 @@ doxgen_generated
 *.swo
 doc
 .vscode
+runs
+datasets

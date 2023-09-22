@@ -441,6 +441,9 @@ struct VioManagerOptions {
   /// Frequency we want to track images at (higher freq ones will be dropped)
   double track_frequency = 20.0;
 
+  /// Select to use SuperPoint and SuperGlue neural network or not
+  bool use_nn = false;
+
   /// Parameters used by our feature initialize / triangulator
   ov_core::FeatureInitializerOptions featinit_options;
 
@@ -482,6 +485,7 @@ struct VioManagerOptions {
       }
       parser->parse_config("knn_ratio", knn_ratio);
       parser->parse_config("track_frequency", track_frequency);
+      parser->parse_config("use_nn", use_nn);
     }
     PRINT_DEBUG("FEATURE TRACKING PARAMETERS:\n");
     PRINT_DEBUG("  - use_stereo: %d\n", use_stereo);
@@ -499,6 +503,7 @@ struct VioManagerOptions {
     PRINT_DEBUG("  - hist method: %d\n", (int)histogram_method);
     PRINT_DEBUG("  - knn ratio: %.3f\n", knn_ratio);
     PRINT_DEBUG("  - track frequency: %.1f\n", track_frequency);
+    PRINT_DEBUG("  - use_nn: %d\n", use_nn);
     featinit_options.print(parser);
   }
 

@@ -24,6 +24,13 @@
     <arg name="dolivetraj"  default="false" />
     <arg name="path_gt"     default="$(find ov_data)/$(arg config)/$(arg dataset).txt" />
 
+    <!-- if we should launch rviz at the same time -->
+    <arg name="dorviz"      default="false" />
+    <arg name="path_rviz"   default="$(find ov_msckf)/launch/display.rviz" />
+
+    <!-- if superpoint and superglue are enabled -->
+    <arg name="use_nn"      default="false" />
+
     <!-- MASTER NODE! -->
 <!--    <node name="ov_msckf" pkg="ov_msckf" type="ros1_serial_msckf" output="screen" clear_params="true" required="true" launch-prefix="gdb -ex run &#45;&#45;args">-->
     <node name="ov_msckf" pkg="ov_msckf" type="ros1_serial_msckf" output="screen" clear_params="true" required="true">
@@ -40,6 +47,7 @@
         <!-- world/filter parameters -->
         <param name="use_stereo"                type="bool"   value="$(arg use_stereo)" />
         <param name="max_cameras"               type="int"    value="$(arg max_cameras)" />
+        <param name="use_nn"                    type="bool"   value="$(arg use_nn)" />
 
         <!-- timing statistics recording -->
         <param name="record_timing_information" type="bool"   value="$(arg dotime)" />
@@ -64,5 +72,9 @@
         </node>
     </group>
 
+    <!-- rviz visualization -->
+    <group if="$(arg dorviz)">
+        <node name="rviz" pkg="rviz" type="rviz" args="-d $(arg path_rviz)" />
+    </group>
 
 </launch>
