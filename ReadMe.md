@@ -50,6 +50,7 @@ catkin_make
 Test on euroc mav dataset.
 
 ```sh
+conda activate openvins
 roslaunch ov_msckf subscribe.launch dorviz:=true dobag:=true bag:=$EUROC_MAV_BAG
 ```
 
