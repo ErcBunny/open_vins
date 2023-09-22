@@ -94,6 +94,7 @@
         <param name="feat_rep_msckf"            type="string" value="$(arg feat_rep)" />
         <param name="feat_rep_slam"             type="string" value="$(arg feat_rep)" />
         <param name="feat_rep_aruco"            type="string" value="$(arg feat_rep)" />
+        <param name="use_nn"                    type="bool"   value="false" />
 
         <!-- tracker/extractor properties -->
         <param name="num_pts"                type="int"    value="$(arg num_pts)" />
