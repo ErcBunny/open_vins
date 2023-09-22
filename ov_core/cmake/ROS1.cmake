@@ -2,6 +2,7 @@ cmake_minimum_required(VERSION 3.3)
 
 # Find ROS build system
 find_package(catkin QUIET COMPONENTS roscpp rosbag sensor_msgs cv_bridge)
+find_package(PythonLibs QUIET)
 
 # Describe ROS project
 option(ENABLE_ROS "Enable or disable building with ROS (if it is found)" ON)
@@ -27,6 +28,7 @@ include_directories(
         ${EIGEN3_INCLUDE_DIR}
         ${Boost_INCLUDE_DIRS}
         ${catkin_INCLUDE_DIRS}
+        ${CMAKE_SOURCE_DIR}/open_vins/SuperGlueCpp/include
 )
 
 # Set link libraries used by all binaries
@@ -34,6 +36,7 @@ list(APPEND thirdparty_libraries
         ${Boost_LIBRARIES}
         ${OpenCV_LIBRARIES}
         ${catkin_LIBRARIES}
+        ${CMAKE_SOURCE_DIR}/open_vins/SuperGlueCpp/lib/libsuperglue.so
 )
 
 ##################################################
@@ -50,6 +53,7 @@ list(APPEND LIBRARY_SOURCES
         src/track/TrackDescriptor.cpp
         src/track/TrackKLT.cpp
         src/track/TrackSIM.cpp
+        src/track/TrackSuperGlue.cpp
         src/types/Landmark.cpp
         src/feat/Feature.cpp
         src/feat/FeatureDatabase.cpp
@@ -59,7 +63,11 @@ list(APPEND LIBRARY_SOURCES
 file(GLOB_RECURSE LIBRARY_HEADERS "src/*.h")
 add_library(ov_core_lib SHARED ${LIBRARY_SOURCES} ${LIBRARY_HEADERS})
 target_link_libraries(ov_core_lib ${thirdparty_libraries})
-target_include_directories(ov_core_lib PUBLIC src/)
+target_include_directories(ov_core_lib PUBLIC
+        src/
+        ${PYTHON_INCLUDE_DIRS}
+        ${CMAKE_SOURCE_DIR}/open_vins/SuperGlueCpp/include
+)
 install(TARGETS ov_core_lib
         ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
         LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}

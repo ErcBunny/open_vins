@@ -1,0 +1,3 @@
+[submodule "SuperGlueCpp"]
+	path = SuperGlueCpp
+	url = https://github.com/ErcBunny/SuperGlueCpp.git

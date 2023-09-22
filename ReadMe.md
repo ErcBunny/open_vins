@@ -1,3 +1,60 @@
+`[WIP WARNING]`
+
+This project features SuperPoint and SuperGlue in the tracking frontend. It can be configured to work in a Conda environment. We currently support ROS noetic only.
+
+```sh
+conda create -n openvins python=3.9 -y
+conda activate openvins
+
+conda config --env --add channels conda-forge
+conda config --env --add channels robostack-staging
+
+conda install mamba -y
+
+mamba install ros-noetic-desktop -y
+conda deactivate
+conda activate openvins
+
+mamba install compilers cmake pkg-config make ninja colcon-common-extensions catkin_tools ceres-solver ros-noetic-image-transport-plugins -y
+
+pip3 install torch torchvision matplotlib numpy ipykernel
+```
+
+Clone me recursively.
+
+```sh
+mkdir -p catkin/src
+cd catkin/src/
+git clone https://github.com/ErcBunny/open_vins.git --recursive
+```
+
+Build `SuperGlueCpp` project as a 3rd party library.
+
+```sh
+conda activate openvins
+cd catkin/src/open_vins/SuperGlueCpp/
+mkdir build
+cd build/
+cmake ..
+make
+```
+
+Build the ROS workspace.
+
+```sh
+conda activate openvins
+cd catkin/
+catkin_make
+```
+
+Test on euroc mav dataset.
+
+```sh
+roslaunch ov_msckf subscribe.launch dorviz:=true dobag:=true bag:=$EUROC_MAV_BAG
+```
+
+*Original README INFO can be found below.*
+
 # OpenVINS
 
 [![ROS 1 Workflow](https://github.com/rpng/open_vins/actions/workflows/build_ros1.yml/badge.svg)](https://github.com/rpng/open_vins/actions/workflows/build_ros1.yml)
