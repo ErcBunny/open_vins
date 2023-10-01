@@ -91,6 +91,13 @@ histogram_method: "HISTOGRAM" # NONE, HISTOGRAM, CLAHE
 
 # superpoint and superglue
 use_nn: false
+nms_radius: 4
+kpt_thresh: 0.005
+use_indoor: true
+sinkhorn_iter: 20
+match_thresh: 0.5
+use_cuda: false
+superglue_path: "/tmp/default"
 
 # aruco tag tracker for the system
 # DICT_6X6_1000 from https://chev.me/arucogen/

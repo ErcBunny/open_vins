@@ -443,6 +443,13 @@ struct VioManagerOptions {
 
   /// Select to use SuperPoint and SuperGlue neural network or not
   bool use_nn = false;
+  int nms_radius = 4;
+  float kpt_thresh = 0.005;
+  bool use_indoor = true;
+  int sinkhorn_iter = 20;
+  float match_thresh = 0.5;
+  bool use_cuda = true;
+  std::string superglue_path = "default";
 
   /// Parameters used by our feature initialize / triangulator
   ov_core::FeatureInitializerOptions featinit_options;
@@ -486,6 +493,13 @@ struct VioManagerOptions {
       parser->parse_config("knn_ratio", knn_ratio);
       parser->parse_config("track_frequency", track_frequency);
       parser->parse_config("use_nn", use_nn);
+      parser->parse_config("nms_radius", nms_radius);
+      parser->parse_config("kpt_thresh", kpt_thresh);
+      parser->parse_config("use_indoor", use_indoor);
+      parser->parse_config("sinkhorn_iter", sinkhorn_iter);
+      parser->parse_config("match_thresh", match_thresh);
+      parser->parse_config("use_cuda", use_cuda);
+      parser->parse_config("superglue_path", superglue_path);
     }
     PRINT_DEBUG("FEATURE TRACKING PARAMETERS:\n");
     PRINT_DEBUG("  - use_stereo: %d\n", use_stereo);
@@ -504,6 +518,14 @@ struct VioManagerOptions {
     PRINT_DEBUG("  - knn ratio: %.3f\n", knn_ratio);
     PRINT_DEBUG("  - track frequency: %.1f\n", track_frequency);
     PRINT_DEBUG("  - use_nn: %d\n", use_nn);
+    PRINT_DEBUG("  - nms_radius: %d\n", nms_radius);
+    PRINT_DEBUG("  - kpt_thresh: %f\n", kpt_thresh);
+    PRINT_DEBUG("  - use_indoor: %d\n", use_indoor);
+    PRINT_DEBUG("  - sinkhorn_iter: %d\n", sinkhorn_iter);
+    PRINT_DEBUG("  - match_thresh: %f\n", match_thresh);
+    PRINT_DEBUG("  - use_cuda: %d\n", use_cuda);
+    PRINT_DEBUG("  - superglue_path: %s\n", superglue_path.c_str());
+
     featinit_options.print(parser);
   }
 

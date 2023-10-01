@@ -28,6 +28,7 @@
 #include "track/TrackDescriptor.h"
 #include "track/TrackKLT.h"
 #include "track/TrackSIM.h"
+#include "track/TrackSuperGlue.h"
 #include "types/Landmark.h"
 #include "types/LandmarkRepresentation.h"
 #include "utils/opencv_lambda_body.h"
@@ -129,14 +130,27 @@ VioManager::VioManager(VioManagerOptions &params_) : thread_init_running(false),
   // NOTE: after we initialize we will increase the total number of feature tracks
   // NOTE: we will split the total number of features over all cameras uniformly
   int init_max_features = std::floor((double)params.init_options.init_max_features / (double)params.state_options.num_cameras);
-  if (params.use_klt) {
-    trackFEATS = std::shared_ptr<TrackBase>(new TrackKLT(state->_cam_intrinsics_cameras, init_max_features,
-                                                         state->_options.max_aruco_features, params.use_stereo, params.histogram_method,
-                                                         params.fast_threshold, params.grid_x, params.grid_y, params.min_px_dist));
-  } else {
-    trackFEATS = std::shared_ptr<TrackBase>(new TrackDescriptor(
-        state->_cam_intrinsics_cameras, init_max_features, state->_options.max_aruco_features, params.use_stereo, params.histogram_method,
-        params.fast_threshold, params.grid_x, params.grid_y, params.min_px_dist, params.knn_ratio));
+  if(!params.use_nn)
+  {
+      if (params.use_klt) {
+          trackFEATS = std::shared_ptr<TrackBase>(new TrackKLT(state->_cam_intrinsics_cameras, init_max_features,
+                                                               state->_options.max_aruco_features, params.use_stereo, params.histogram_method,
+                                                               params.fast_threshold, params.grid_x, params.grid_y, params.min_px_dist));
+      } else {
+          trackFEATS = std::shared_ptr<TrackBase>(new TrackDescriptor(
+                  state->_cam_intrinsics_cameras, init_max_features, state->_options.max_aruco_features, params.use_stereo, params.histogram_method,
+                  params.fast_threshold, params.grid_x, params.grid_y, params.min_px_dist, params.knn_ratio));
+      }
+  }
+  else
+  {
+      trackFEATS = std::shared_ptr<TrackBase>(
+              new TrackSuperGlue(
+                      state->_cam_intrinsics_cameras, params.num_pts,
+                      0, false, params.histogram_method, params.min_px_dist,
+                      params.nms_radius, params.kpt_thresh, params.use_indoor,
+                      params.sinkhorn_iter,params.match_thresh,
+                      params.use_cuda, params.superglue_path));
   }
 
   // Initialize our aruco tag extractor

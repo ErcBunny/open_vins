@@ -48,7 +48,7 @@ bagstarttimes=(
 save_path1="${SCRIPT_DIR}/runs/exp_euroc/algorithms/"
 save_path2="${SCRIPT_DIR}/runs/exp_euroc/timings/"
 bag_path="${SCRIPT_DIR}/datasets/euroc_mav/"
-ov_ver="2.7_spsg_nn"
+ov_ver="2.7_spsg_orb"
 
 
 #=============================================================
@@ -91,14 +91,9 @@ fi
 # run our ROS launch file (note we send console output to terminator)
 # subscribe=live pub, serial=read from bag (fast)
 roslaunch ov_msckf serial.launch \
-  use_nn:="true" \
-  superglue_path:="${SCRIPT_DIR}/../../SuperGlueCpp/models/" \
+  use_klt:="false" \
   max_cameras:="$temp1" \
   use_stereo:="$temp2" \
-  init_imu_thresh:="1.5" \
-  init_max_disparity:="7.5" \
-  init_dyn_use:="true" \
-  init_dyn_mle_max_time:="3" \
   config:="euroc_mav" \
   dataset:="${bagnames[i]}" \
   bag:="$bag_path/${bagnames[i]}.bag" \

@@ -28,8 +28,20 @@
     <arg name="dorviz"      default="false" />
     <arg name="path_rviz"   default="$(find ov_msckf)/launch/display.rviz" />
 
-    <!-- if superpoint and superglue are enabled -->
-    <arg name="use_nn"      default="false" />
+    <!-- additional settings -->
+    <arg name="use_nn"                  default="false" />
+    <arg name="nms_radius"              default="4" />
+    <arg name="kpt_thresh"              default="0.005" />
+    <arg name="use_indoor"              default="true" />
+    <arg name="sinkhorn_iter"           default="20" />
+    <arg name="match_thresh"            default="0.5" />
+    <arg name="use_cuda"                default="false" />
+    <arg name="superglue_path"          default="default" />
+    <arg name="use_klt"                 default="true" />
+    <arg name="init_imu_thresh"         default="1.5" />
+    <arg name="init_max_disparity"      default="10" />
+    <arg name="init_dyn_use"            default="false" />
+    <arg name="init_dyn_mle_max_time"   default="0.05" />
 
     <!-- MASTER NODE! -->
 <!--    <node name="ov_msckf" pkg="ov_msckf" type="ros1_serial_msckf" output="screen" clear_params="true" required="true" launch-prefix="gdb -ex run &#45;&#45;args">-->
@@ -52,6 +64,20 @@
         <!-- timing statistics recording -->
         <param name="record_timing_information" type="bool"   value="$(arg dotime)" />
         <param name="record_timing_filepath"    type="str"    value="$(arg path_time)" />
+
+        <!-- additional settings -->
+        <param name="nms_radius"                type="int"    value="$(arg nms_radius)" />
+        <param name="kpt_thresh"                type="double" value="$(arg kpt_thresh)" />
+        <param name="use_indoor"                type="bool"   value="$(arg use_indoor)" />
+        <param name="sinkhorn_iter"             type="int"    value="$(arg sinkhorn_iter)" />
+        <param name="match_thresh"              type="double" value="$(arg match_thresh)" />
+        <param name="use_cuda"                  type="bool"   value="$(arg use_cuda)" />
+        <param name="superglue_path"            type="string" value="$(arg superglue_path)" />
+        <param name="use_klt"                   type="bool"   value="$(arg use_klt)" />
+        <param name="init_imu_thresh"           type="double" value="$(arg init_imu_thresh)" />
+        <param name="init_max_disparity"        type="double" value="$(arg init_max_disparity)" />
+        <param name="init_dyn_use"              type="bool"   value="$(arg init_dyn_use)" />
+        <param name="init_dyn_mle_max_time"     type="double" value="$(arg init_dyn_mle_max_time)" />
 
     </node>
 

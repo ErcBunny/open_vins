@@ -48,7 +48,7 @@ bagstarttimes=(
 save_path1="${SCRIPT_DIR}/runs/exp_euroc/algorithms/"
 save_path2="${SCRIPT_DIR}/runs/exp_euroc/timings/"
 bag_path="${SCRIPT_DIR}/datasets/euroc_mav/"
-ov_ver="2.7_spsg_base"
+ov_ver="2.7_spsg_klt"
 
 
 #=============================================================
@@ -75,7 +75,7 @@ filename_time="$save_path2/ov_${ov_ver}_${modes[h]}/${bagnames[i]}/${j}_timing.t
 if [ "${modes[h]}" == "mono" ]
 then
   temp1="1"
-  temp2="true"
+  temp2="false"
 fi
 if [ "${modes[h]}" == "binocular" ]
 then
@@ -91,6 +91,7 @@ fi
 # run our ROS launch file (note we send console output to terminator)
 # subscribe=live pub, serial=read from bag (fast)
 roslaunch ov_msckf serial.launch \
+  use_klt:="true" \
   max_cameras:="$temp1" \
   use_stereo:="$temp2" \
   config:="euroc_mav" \

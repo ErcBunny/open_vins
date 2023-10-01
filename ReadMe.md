@@ -1,6 +1,16 @@
-`[WIP WARNING]`
+# OpenVINS * (SuperPoint + SuperGlue)
 
-This project features SuperPoint and SuperGlue in the tracking frontend. It can be configured to work in a Conda environment. We currently support ROS noetic only.
+This project features **SuperPoint** and **SuperGlue** in the tracking frontend. Currently **only the monocular** tracking frontend is supported. This is course work project for [AE4270 Control & Operations Project](https://studyguide.tudelft.nl/a101_displayCourse.do?course_id=65822) at [MAVLab](https://mavlab.tudelft.nl/), TU Delft.
+
+## Main Results
+
+```sh
+#TODO
+```
+
+## Env Setup & Compilation
+
+You can test this project inside a virtual environment without messing up your system installs. Of course you can use the system installation of ROS. Noetic is officially recommended.
 
 ```sh
 conda create -n openvins python=3.9 -y
@@ -23,8 +33,8 @@ pip3 install torch torchvision matplotlib numpy ipykernel
 Clone me recursively.
 
 ```sh
-mkdir -p catkin/src
-cd catkin/src/
+mkdir -p catkin_ov/src
+cd catkin_ov/src/
 git clone https://github.com/ErcBunny/open_vins.git --recursive
 ```
 
@@ -32,7 +42,7 @@ Build `SuperGlueCpp` project as a 3rd party library.
 
 ```sh
 conda activate openvins
-cd catkin/src/open_vins/SuperGlueCpp/
+cd catkin_ov/src/open_vins/SuperGlueCpp/
 mkdir build
 cd build/
 cmake ..
@@ -43,17 +53,32 @@ Build the ROS workspace.
 
 ```sh
 conda activate openvins
-cd catkin/
+cd catkin_ov/
 catkin_make
 ```
 
-Test on euroc mav dataset.
+## Run Me
+
+We test our implementation on the `euroc mav` dataset. GPU inference cannot be enabled somehow, so this project only supports running in the serial mode. For "quick" tests, run using the following lines.
 
 ```sh
-conda activate openvins
-roslaunch ov_msckf subscribe.launch dorviz:=true dobag:=true bag:=$EUROC_MAV_BAG
+# TODO
 ```
 
+Please find additional comments below or in the launch file [`serial.launch`](./ov_msckf/launch/serial.launch).
+
+```sh
+# TODO
+```
+
+To reproduce the main results, first create a soft link to the dataset folder in `ov_msckf/scripts/` so that `ov_msckf/scripts/datasets/` contains directory `euroc_mav`, where bag files are stored.
+
+```sh
+cd ov_msckf/scripts/
+ln -s ${ABS_PATH_TO_data_folder} datasets
+```
+
+---
 *Original README INFO can be found below.*
 
 # OpenVINS

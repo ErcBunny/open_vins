@@ -204,8 +204,8 @@ void TrackBase::display_history(cv::Mat &img_out, int r1, int g1, int b1, int r2
         }
         // If the first point, display the ID
         if (z == feat.uvs[pair.first].size() - 1) {
-          // cv::putText(img_out0, std::to_string(feat->featid), pt_c, cv::FONT_HERSHEY_SIMPLEX, 0.5, cv::Scalar(0, 0, 255), 1,
-          // cv::LINE_AA); cv::circle(img_out0, pt_c, 2, cv::Scalar(color,color,255), CV_FILLED);
+//           cv::putText(img_temp, std::to_string(feat.featid), pt_c, cv::FONT_HERSHEY_SIMPLEX, 0.5, cv::Scalar(0, 0, 255), 1,
+//           cv::LINE_AA); cv::circle(img_temp, pt_c, 2, cv::Scalar(0,0,255), cv::FILLED);
         }
       }
     }
