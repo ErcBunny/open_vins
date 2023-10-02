@@ -6,7 +6,7 @@
 #define SRC_TRACKSUPERGLUE_H
 
 #include "TrackBase.h"
-#include "SuperGlue.h"
+#include "SuperGluePyWrap.h"
 
 #include <utility>
 #include "cam/CamBase.h"
@@ -33,7 +33,7 @@ namespace ov_core {
             const std::string &superglue_path)
         : TrackBase(std::move(cameras), numfeats, numaruco, stereo, histmethod)
         {
-            sg_worker = new SuperGlue(
+            sg_worker = new sg_pywrap::SuperGlue(
                 nms_r,
                 kpt_thr,
                 numfeats,
@@ -73,7 +73,7 @@ namespace ov_core {
                                         size_t cam_id,
                                         bool do_ransac);
 
-        SuperGlue* sg_worker;
+        sg_pywrap::SuperGlue* sg_worker;
 
         std::map<size_t, std::vector<float>> kpt_scores_last;
         std::map<size_t, cv::Mat> descriptors_last;

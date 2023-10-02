@@ -36,7 +36,7 @@ list(APPEND thirdparty_libraries
         ${Boost_LIBRARIES}
         ${OpenCV_LIBRARIES}
         ${catkin_LIBRARIES}
-        ${CMAKE_SOURCE_DIR}/open_vins/SuperGlueCpp/lib/libsuperglue.so
+        ${CMAKE_SOURCE_DIR}/open_vins/SuperGlueCpp/lib/libsuperglue_pywrap.so
 )
 
 ##################################################

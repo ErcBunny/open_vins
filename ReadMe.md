@@ -10,24 +10,18 @@ This project features **SuperPoint** and **SuperGlue** in the tracking frontend.
 
 ## Env Setup & Compilation
 
-You can test this project inside a virtual environment without messing up your system installs. Of course you can use the system installation of ROS. Noetic is officially recommended.
+You can test this project inside a virtual environment (Miniforge) without messing up your system installs. Of course you can use the system installation of ROS. Noetic is officially recommended.
 
 ```sh
-conda create -n openvins python=3.9 -y
-conda activate openvins
+mamba create -n openvins python=3.9 -y
+mamba activate openvins
 
-conda config --env --add channels conda-forge
-conda config --env --add channels robostack-staging
+mamba install ros-noetic-desktop ros-noetic-image-transport-plugins -c robostack-staging -y
+mamba deactivate
+mamba activate openvins
 
-conda install mamba -y
-
-mamba install ros-noetic-desktop -y
-conda deactivate
-conda activate openvins
-
-mamba install compilers cmake pkg-config make ninja colcon-common-extensions catkin_tools ceres-solver ros-noetic-image-transport-plugins -y
-
-pip3 install torch torchvision matplotlib numpy ipykernel
+mamba install compilers cmake pkg-config make ninja colcon-common-extensions catkin_tools ipykernel matplotlib numpy ipykernel ceres-solver=2.1.0 gcc=11 -y
+mamba install pytorch=2.0.1 torchvision pytorch-cuda=11.8 cuda-toolkit=11.8 cuda-nvcc=11.8 -c pytorch -c nvidia -y
 ```
 
 Clone me recursively.
@@ -38,18 +32,9 @@ cd catkin_ov/src/
 git clone https://github.com/ErcBunny/open_vins.git --recursive
 ```
 
-Build `SuperGlueCpp` project as a 3rd party library.
+Build `SuperGlueCpp` project as a 3rd party library. Please refer to its `README` for instructions. Env `openvins` can be directly used for building.
 
-```sh
-conda activate openvins
-cd catkin_ov/src/open_vins/SuperGlueCpp/
-mkdir build
-cd build/
-cmake ..
-make
-```
-
-Build the ROS workspace.
+Then build the ROS workspace.
 
 ```sh
 conda activate openvins
@@ -59,7 +44,7 @@ catkin_make
 
 ## Run Me
 
-We test our implementation on the `euroc mav` dataset. GPU inference cannot be enabled somehow, so this project only supports running in the serial mode. For "quick" tests, run using the following lines.
+We test our implementation on the `euroc mav` dataset. GPU inference cannot be enabled somehow using "Python Wrapper" style implementation, so this project only supports running in the serial mode for now. For "quick" tests, run using the following lines.
 
 ```sh
 # TODO
@@ -77,6 +62,8 @@ To reproduce the main results, first create a soft link to the dataset folder in
 cd ov_msckf/scripts/
 ln -s ${ABS_PATH_TO_data_folder} datasets
 ```
+
+Now run `run_ros_eth_spsg_klt.sh`, `run_ros_eth_spsg_orb.sh`, and `run_ros_eth_spsg_nn.sh`.
 
 ---
 *Original README INFO can be found below.*
