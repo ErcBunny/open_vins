@@ -44,6 +44,7 @@
     <arg name="init_max_disparity"      default="10" />
     <arg name="init_dyn_use"            default="false" />
     <arg name="init_dyn_mle_max_time"   default="0.05" />
+    <arg name="num_pts"                 default="200" />
 
     <!-- MASTER NODE! -->
 <!--    <node name="ov_msckf" pkg="ov_msckf" type="run_subscribe_msckf" output="screen" clear_params="true" required="true" launch-prefix="gdb -ex run &#45;&#45;args">-->
@@ -75,6 +76,7 @@
         <param name="init_max_disparity"        type="double" value="$(arg init_max_disparity)" />
         <param name="init_dyn_use"              type="bool"   value="$(arg init_dyn_use)" />
         <param name="init_dyn_mle_max_time"     type="double" value="$(arg init_dyn_mle_max_time)" />
+        <param name="num_pts"                   type="int"    value="$(arg num_pts)" />
 
     </node>
 

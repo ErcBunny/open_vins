@@ -92,13 +92,17 @@ fi
 # subscribe=live pub, serial=read from bag (fast)
 roslaunch ov_msckf serial.launch \
   use_nn:="true" \
+  kpt_thresh:="0.005" \
+  match_thresh:="0.75" \
+  num_pts:="-1" \
+  verbosity:="ALL" \
   superglue_path:="${SCRIPT_DIR}/../../SuperGlueCpp/models/" \
   max_cameras:="$temp1" \
   use_stereo:="$temp2" \
   init_imu_thresh:="1.5" \
-  init_max_disparity:="7.5" \
+  init_max_disparity:="10" \
   init_dyn_use:="true" \
-  init_dyn_mle_max_time:="3" \
+  init_dyn_mle_max_time:="0.05" \
   config:="euroc_mav" \
   dataset:="${bagnames[i]}" \
   bag:="$bag_path/${bagnames[i]}.bag" \
@@ -109,7 +113,7 @@ roslaunch ov_msckf serial.launch \
   dotime:="true" \
   dolivetraj:="true" \
   dorviz:="true" \
-  path_time:="$filename_time" &> /dev/null
+  path_time:="$filename_time" #&> /dev/null
 
 # print out the time elapsed
 end_time="$(date -u +%s)"
