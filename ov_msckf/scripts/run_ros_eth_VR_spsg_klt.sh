@@ -21,11 +21,11 @@ bagnames=(
   "V2_01_easy"
   "V2_02_medium"
   "V2_03_difficult"
-  "MH_01_easy"
-  "MH_02_easy"
-  "MH_03_medium"
-  "MH_04_difficult"
-  "MH_05_difficult"
+  # "MH_01_easy"
+  # "MH_02_easy"
+  # "MH_03_medium"
+  # "MH_04_difficult"
+  # "MH_05_difficult"
 )
 
 # how far we should start into the dataset
@@ -48,7 +48,7 @@ bagstarttimes=(
 save_path1="${SCRIPT_DIR}/runs/exp_euroc/algorithms/"
 save_path2="${SCRIPT_DIR}/runs/exp_euroc/timings/"
 bag_path="${SCRIPT_DIR}/datasets/euroc_mav/"
-ov_ver="2.7_spsg_orb"
+ov_ver="2.7_spsg_klt"
 
 
 #=============================================================
@@ -91,7 +91,11 @@ fi
 # run our ROS launch file (note we send console output to terminator)
 # subscribe=live pub, serial=read from bag (fast)
 roslaunch ov_msckf serial.launch \
-  use_klt:="false" \
+  use_klt:="true" \
+  num_pts:="500" \
+  init_imu_thresh:="1" \
+  init_max_disparity:="7.5" \
+  init_dyn_use:="true" \
   max_cameras:="$temp1" \
   use_stereo:="$temp2" \
   config:="euroc_mav" \

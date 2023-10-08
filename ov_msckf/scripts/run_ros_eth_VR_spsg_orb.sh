@@ -21,11 +21,11 @@ bagnames=(
   "V2_01_easy"
   "V2_02_medium"
   "V2_03_difficult"
-  "MH_01_easy"
-  "MH_02_easy"
-  "MH_03_medium"
-  "MH_04_difficult"
-  "MH_05_difficult"
+  # "MH_01_easy"
+  # "MH_02_easy"
+  # "MH_03_medium"
+  # "MH_04_difficult"
+  # "MH_05_difficult"
 )
 
 # how far we should start into the dataset
@@ -48,7 +48,7 @@ bagstarttimes=(
 save_path1="${SCRIPT_DIR}/runs/exp_euroc/algorithms/"
 save_path2="${SCRIPT_DIR}/runs/exp_euroc/timings/"
 bag_path="${SCRIPT_DIR}/datasets/euroc_mav/"
-ov_ver="2.7_spsg_nn"
+ov_ver="2.7_spsg_orb"
 
 
 #=============================================================
@@ -91,18 +91,13 @@ fi
 # run our ROS launch file (note we send console output to terminator)
 # subscribe=live pub, serial=read from bag (fast)
 roslaunch ov_msckf serial.launch \
-  use_nn:="true" \
-  kpt_thresh:="0.005" \
-  match_thresh:="0.75" \
-  num_pts:="-1" \
-  verbosity:="ALL" \
-  superglue_path:="${SCRIPT_DIR}/../../SuperGlueCpp/models/" \
+  use_klt:="false" \
+  num_pts:="500" \
+  init_imu_thresh:="1" \
+  init_max_disparity:="7.5" \
+  init_dyn_use:="true" \
   max_cameras:="$temp1" \
   use_stereo:="$temp2" \
-  init_imu_thresh:="1.5" \
-  init_max_disparity:="10" \
-  init_dyn_use:="true" \
-  init_dyn_mle_max_time:="0.05" \
   config:="euroc_mav" \
   dataset:="${bagnames[i]}" \
   bag:="$bag_path/${bagnames[i]}.bag" \
@@ -113,7 +108,7 @@ roslaunch ov_msckf serial.launch \
   dotime:="true" \
   dolivetraj:="true" \
   dorviz:="true" \
-  path_time:="$filename_time" #&> /dev/null
+  path_time:="$filename_time" &> /dev/null
 
 # print out the time elapsed
 end_time="$(date -u +%s)"
