@@ -42,13 +42,14 @@
 #include "plot/matplotlibcpp.h"
 
 // Will plot the xy 3d position of the pose trajectories
-void plot_xy_positions(const std::string &name, const std::string &color, const std::vector<Eigen::Matrix<double, 7, 1>> &poses) {
+void plot_xy_positions(const std::string &name, const std::string &color, const std::string &linestyle, const std::string &linewidth, const std::vector<Eigen::Matrix<double, 7, 1>> &poses) {
 
   // Paramters for our line
   std::map<std::string, std::string> params;
   params.insert({"label", name});
-  params.insert({"linestyle", "-"});
+  params.insert({"linestyle", linestyle});
   params.insert({"color", color});
+  params.insert({"linewidth", linewidth});
 
   // Create vectors of our x and y axis
   std::vector<double> x, y;
@@ -62,14 +63,15 @@ void plot_xy_positions(const std::string &name, const std::string &color, const 
 }
 
 // Will plot the z 3d position of the pose trajectories
-void plot_z_positions(const std::string &name, const std::string &color, const std::vector<double> &times,
+void plot_z_positions(const std::string &name, const std::string &color, const std::string &linestyle, const std::string &linewidth, const std::vector<double> &times,
                       const std::vector<Eigen::Matrix<double, 7, 1>> &poses) {
 
   // Paramters for our line
   std::map<std::string, std::string> params;
   params.insert({"label", name});
-  params.insert({"linestyle", "-"});
+  params.insert({"linestyle", linestyle});
   params.insert({"color", color});
+  params.insert({"linewidth", linewidth});
 
   // Create vectors of our x and y axis
   std::vector<double> time, z;
@@ -163,21 +165,24 @@ int main(int argc, char **argv) {
 #ifdef HAVE_PYTHONLIBS
 
   // Colors that we are plotting
-  std::vector<std::string> colors = {"black", "blue", "red", "green", "cyan", "magenta"};
+  // std::vector<std::string> colors = {"black", "blue", "red", "green", "cyan", "magenta"};
+  std::vector<std::string> colors = {"tab:blue", "tab:orange", "tab:green", "tab:red", "tab:purple", "tab:brown"};
   // assert(algo_rpe.size() <= colors.size()*linestyle.size());
 
   // Plot this figure
   matplotlibcpp::figure_size(1000, 750);
 
   // Plot the position trajectories
-  for (size_t i = 0; i < times.size(); i++) {
-    plot_xy_positions(names.at(i), colors.at(i), poses.at(i));
+  plot_xy_positions(names.at(0), "black", "--", "2", poses.at(0));
+  for (size_t i = 1; i < times.size(); i++) {
+    plot_xy_positions(names.at(i), colors.at(i - 1), "-", "1", poses.at(i));
   }
 
   // Display to the user
   matplotlibcpp::xlabel("x-axis (m)");
   matplotlibcpp::ylabel("y-axis (m)");
   matplotlibcpp::tight_layout();
+  matplotlibcpp::legend();
   matplotlibcpp::show(false);
 
   // Plot this figure
@@ -193,8 +198,9 @@ int main(int argc, char **argv) {
   }
 
   // Plot the position trajectories
-  for (size_t i = 0; i < times.size(); i++) {
-    plot_z_positions(names.at(i), colors.at(i), times.at(i), poses.at(i));
+  plot_z_positions(names.at(0), "black", "--", "2", times.at(0), poses.at(0));
+  for (size_t i = 1; i < times.size(); i++) {
+    plot_z_positions(names.at(i), colors.at(i - 1), "-", "1", times.at(i), poses.at(i));
   }
 
   // Display to the user

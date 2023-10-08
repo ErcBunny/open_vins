@@ -344,7 +344,8 @@ int main(int argc, char **argv) {
 #ifdef HAVE_PYTHONLIBS
 
   // Plot line colors
-  std::vector<std::string> colors = {"blue", "red", "black", "green", "cyan", "magenta"};
+  // std::vector<std::string> colors = {"blue", "red", "black", "green", "cyan", "magenta"};
+  std::vector<std::string> colors = {"tab:blue", "tab:orange", "tab:green", "tab:red", "tab:purple", "tab:brown"};
   std::vector<std::string> linestyle = {"-", "--", "-."};
   assert(algo_rpe.size() <= colors.size() * linestyle.size());
 
