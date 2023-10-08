@@ -1,11 +1,17 @@
 # OpenVINS * (SuperPoint + SuperGlue)
 
-This project features **SuperPoint** and **SuperGlue** in the tracking frontend. Currently **only the monocular** tracking frontend is supported. This is course work project for [AE4270 Control & Operations Project](https://studyguide.tudelft.nl/a101_displayCourse.do?course_id=65822) at [MAVLab](https://mavlab.tudelft.nl/), TU Delft.
+This is a small course work project for [AE4270 Control & Operations Project](https://studyguide.tudelft.nl/a101_displayCourse.do?course_id=65822) at [MAVLab](https://mavlab.tudelft.nl/), TU Delft.
+
+It features **SuperPoint** and **SuperGlue** in the tracking frontend. Currently **only the monocular** tracking frontend is supported and tested.
 
 ## Main Results
 
+![](./ov_msckf/scripts/runs_oct4_23/eval_save/err_fig/overview_for_readme.png)
+
+![](./ov_msckf/scripts/runs_oct4_23/eval_save/err_fig/table_for_readme.png)
+
 ```sh
-#TODO
+# TODO: add comments, table caption, link to final report
 ```
 
 ## Env Setup & Compilation
