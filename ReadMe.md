@@ -21,6 +21,9 @@ mamba deactivate
 mamba activate openvins
 
 mamba install compilers cmake pkg-config make ninja colcon-common-extensions catkin_tools ipykernel matplotlib numpy ipykernel ceres-solver=2.1.0 gcc=11 -y
+
+# pytorch-cuda=11.8 cuda-toolkit=11.8 cuda-nvcc=11.8 are for libtorch
+# they are not needed to use with the python wrapper version of SuperGlueCpp
 mamba install pytorch=2.0.1 torchvision pytorch-cuda=11.8 cuda-toolkit=11.8 cuda-nvcc=11.8 -c pytorch -c nvidia -y
 ```
 
@@ -32,9 +35,17 @@ cd catkin_ov/src/
 git clone https://github.com/ErcBunny/open_vins.git --recursive
 ```
 
-Build `SuperGlueCpp` project as a 3rd party library. Please refer to its `README` for instructions. Env `openvins` can be directly used for building.
+Build `SuperGlueCpp` project as a 3rd party library. Env `openvins` can be directly used for building. For using the wrapper library (not libtorch) version, run the following.
 
-Then build the ROS workspace.
+```sh
+cd SuperGlueCpp
+mkdir build
+cd build
+cmake ..
+make
+```
+
+And you will see a shared library file in `SuperGlueCpp/lib/`. Then build the ROS workspace.
 
 ```sh
 conda activate openvins
@@ -44,17 +55,7 @@ catkin_make
 
 ## Run Me
 
-We test our implementation on the `euroc mav` dataset. GPU inference cannot be enabled somehow using "Python Wrapper" style implementation, so this project only supports running in the serial mode for now. For "quick" tests, run using the following lines.
-
-```sh
-# TODO
-```
-
-Please find additional comments below or in the launch file [`serial.launch`](./ov_msckf/launch/serial.launch).
-
-```sh
-# TODO
-```
+We test our implementation on the `euroc mav` dataset. GPU inference cannot be enabled somehow using "Python Wrapper" style implementation, so this project only supports running in the serial mode for now.
 
 To reproduce the main results, first create a soft link to the dataset folder in `ov_msckf/scripts/` so that `ov_msckf/scripts/datasets/` contains directory `euroc_mav`, where bag files are stored.
 
@@ -63,10 +64,36 @@ cd ov_msckf/scripts/
 ln -s ${ABS_PATH_TO_data_folder} datasets
 ```
 
-Now run `run_ros_eth_spsg_klt.sh`, `run_ros_eth_spsg_orb.sh`, and `run_ros_eth_spsg_nn.sh`.
+Now run the following scripts. Results will be saved to `ov_msckf/scripts/runs/`.
+
+```sh
+conda activate openvins
+cd ov_msckf/scripts/
+# KLT
+./run_ros_eth_VR_spsg_klt.sh
+./run_ros_eth_MH_spsg_klt.sh
+# ORB
+./run_ros_eth_VR_spsg_orb.sh
+./run_ros_eth_MH_spsg_orb.sh
+# SuperPoint + SuperGlue
+./run_ros_eth_VR_spsg_nn.sh
+./run_ros_eth_MH_spsg_nn.sh
+```
+
+In `ov_msckf/scripts/runs_oct4_23/` you can find an example of results (several files are renamed) which are obtained using Ubuntu 22 on a CPU 13900K.
+
+
+## Scripts for Eval
+
+```sh
+conda activate openvins
+cd ov_msckf/scripts/runs_oct4_23/
+./eval_err.sh
+./eval_timing.sh
+```
 
 ---
-*Original README INFO can be found below.*
+*Original README begins...*
 
 # OpenVINS
 
