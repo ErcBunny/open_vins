@@ -10,3 +10,4 @@ doc
 .vscode
 runs
 datasets
+*.DS_Store
