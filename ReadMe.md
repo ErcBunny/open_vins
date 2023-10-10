@@ -6,9 +6,9 @@ It features **SuperPoint** and **SuperGlue** in the tracking frontend. Currently
 
 ## Main Results
 
-![](./ov_msckf/scripts/runs_oct4_23/eval_save/err_fig/overview_for_readme.png)
+![](./ov_msckf/scripts/runs_oct4_23/eval_save/err_fig/RPE_overview.png)
 
-![](./ov_msckf/scripts/runs_oct4_23/eval_save/err_fig/table_for_readme.png)
+![](./ov_msckf/scripts/runs_oct4_23/eval_save/err.png)
 
 ```sh
 # TODO: add comments, table caption, link to final report

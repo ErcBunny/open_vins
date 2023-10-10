@@ -47,7 +47,7 @@ rosrun ov_eval plot_trajectories posyaw \
     ${SCRIPT_DIR}/../../../ov_data/euroc_mav/V2_01_easy.txt \
     ${SCRIPT_DIR}/exp_euroc/algorithms/Mono-KLT/V2_01_easy/KLT.txt \
     ${SCRIPT_DIR}/exp_euroc/algorithms/Mono-NN/V2_01_easy/NN.txt \
-    # ORB failed ${SCRIPT_DIR}/exp_euroc/algorithms/Mono-ORB/V2_01_easy/ORB.txt \
+    ${SCRIPT_DIR}/exp_euroc/algorithms/Mono-ORB/V2_01_easy/ORB.txt \
 
 rosrun ov_eval error_dataset posyaw \
     ${SCRIPT_DIR}/../../../ov_data/euroc_mav/V2_01_easy.txt \
@@ -71,7 +71,7 @@ rosrun ov_eval plot_trajectories posyaw \
     ${SCRIPT_DIR}/../../../ov_data/euroc_mav/V2_03_difficult.txt \
     ${SCRIPT_DIR}/exp_euroc/algorithms/Mono-KLT/V2_03_difficult/KLT.txt \
     ${SCRIPT_DIR}/exp_euroc/algorithms/Mono-NN/V2_03_difficult/NN.txt \
-    ${SCRIPT_DIR}/exp_euroc/algorithms/Mono-ORB/V2_03_difficult/ORB.txt \
+    # ORB failed ${SCRIPT_DIR}/exp_euroc/algorithms/Mono-ORB/V2_03_difficult/ORB.txt \
 
 rosrun ov_eval error_dataset posyaw \
     ${SCRIPT_DIR}/../../../ov_data/euroc_mav/V2_03_difficult.txt \
@@ -83,7 +83,7 @@ rosrun ov_eval plot_trajectories posyaw \
     ${SCRIPT_DIR}/../../../ov_data/euroc_mav/MH_01_easy.txt \
     ${SCRIPT_DIR}/exp_euroc/algorithms/Mono-KLT/MH_01_easy/KLT.txt \
     ${SCRIPT_DIR}/exp_euroc/algorithms/Mono-NN/MH_01_easy/NN.txt \
-    # ORB failed ${SCRIPT_DIR}/exp_euroc/algorithms/Mono-ORB/MH_01_easy/ORB.txt \
+    ${SCRIPT_DIR}/exp_euroc/algorithms/Mono-ORB/MH_01_easy/ORB.txt \
 
 rosrun ov_eval error_dataset posyaw \
     ${SCRIPT_DIR}/../../../ov_data/euroc_mav/MH_01_easy.txt \
@@ -95,7 +95,7 @@ rosrun ov_eval plot_trajectories posyaw \
     ${SCRIPT_DIR}/../../../ov_data/euroc_mav/MH_02_easy.txt \
     ${SCRIPT_DIR}/exp_euroc/algorithms/Mono-KLT/MH_02_easy/KLT.txt \
     ${SCRIPT_DIR}/exp_euroc/algorithms/Mono-NN/MH_02_easy/NN.txt \
-    # ORB failed ${SCRIPT_DIR}/exp_euroc/algorithms/Mono-ORB/MH_02_easy/ORB.txt \
+    ${SCRIPT_DIR}/exp_euroc/algorithms/Mono-ORB/MH_02_easy/ORB.txt \
 
 rosrun ov_eval error_dataset posyaw \
     ${SCRIPT_DIR}/../../../ov_data/euroc_mav/MH_02_easy.txt \

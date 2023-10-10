@@ -9,7 +9,7 @@ mean_time = 0.0017 | std = 0.0004 | 99th = 0.0025  | max = 0.0063 (slam update)
 mean_time = 0.0004 | std = 0.0005 | 99th = 0.0016  | max = 0.0042 (slam delayed)
 mean_time = 0.0013 | std = 0.0003 | 99th = 0.0020  | max = 0.0055 (re-tri & marg)
 mean_time = 0.0083 | std = 0.0017 | 99th = 0.0123  | max = 0.0157 (total)
-./eval_time.sh: line 18: 35015 Segmentation fault      (core dumped) rosrun ov_eval timing_flamegraph ${SCRIPT_DIR}/exp_euroc/timings/Mono-KLT/${bagnames[i]}/KLT.txt
+./eval_time.sh: line 18: 1135822 Segmentation fault      (core dumped) rosrun ov_eval timing_flamegraph ${SCRIPT_DIR}/exp_euroc/timings/Mono-KLT/${bagnames[i]}/KLT.txt
 ---------------- NN ----------------
 Setting printing level to: INFO
 [TIME]: loaded 2794 timestamps from file (7 categories)!!
@@ -20,18 +20,18 @@ mean_time = 0.0005 | std = 0.0004 | 99th = 0.0015  | max = 0.0031 (slam update)
 mean_time = 0.0009 | std = 0.0007 | 99th = 0.0026  | max = 0.0062 (slam delayed)
 mean_time = 0.0021 | std = 0.0005 | 99th = 0.0033  | max = 0.0060 (re-tri & marg)
 mean_time = 0.2768 | std = 0.0123 | 99th = 0.3055  | max = 0.3099 (total)
-./eval_time.sh: line 18: 35059 Segmentation fault      (core dumped) rosrun ov_eval timing_flamegraph ${SCRIPT_DIR}/exp_euroc/timings/Mono-NN/${bagnames[i]}/NN.txt
+./eval_time.sh: line 18: 1135865 Segmentation fault      (core dumped) rosrun ov_eval timing_flamegraph ${SCRIPT_DIR}/exp_euroc/timings/Mono-NN/${bagnames[i]}/NN.txt
 ---------------- ORB ----------------
 Setting printing level to: INFO
-[TIME]: loaded 2791 timestamps from file (7 categories)!!
-mean_time = 0.0048 | std = 0.0008 | 99th = 0.0067  | max = 0.0092 (tracking)
-mean_time = 0.0001 | std = 0.0000 | 99th = 0.0002  | max = 0.0004 (propagation)
-mean_time = 0.0008 | std = 0.0004 | 99th = 0.0017  | max = 0.0042 (msckf update)
-mean_time = 0.0002 | std = 0.0002 | 99th = 0.0005  | max = 0.0021 (slam update)
-mean_time = 0.0003 | std = 0.0003 | 99th = 0.0010  | max = 0.0037 (slam delayed)
-mean_time = 0.0014 | std = 0.0004 | 99th = 0.0024  | max = 0.0056 (re-tri & marg)
-mean_time = 0.0076 | std = 0.0013 | 99th = 0.0106  | max = 0.0142 (total)
-./eval_time.sh: line 18: 35102 Segmentation fault      (core dumped) rosrun ov_eval timing_flamegraph ${SCRIPT_DIR}/exp_euroc/timings/Mono-ORB/${bagnames[i]}/ORB.txt
+[TIME]: loaded 2793 timestamps from file (7 categories)!!
+mean_time = 0.0044 | std = 0.0005 | 99th = 0.0054  | max = 0.0061 (tracking)
+mean_time = 0.0001 | std = 0.0000 | 99th = 0.0001  | max = 0.0002 (propagation)
+mean_time = 0.0006 | std = 0.0003 | 99th = 0.0013  | max = 0.0017 (msckf update)
+mean_time = 0.0001 | std = 0.0001 | 99th = 0.0005  | max = 0.0010 (slam update)
+mean_time = 0.0002 | std = 0.0003 | 99th = 0.0009  | max = 0.0019 (slam delayed)
+mean_time = 0.0010 | std = 0.0001 | 99th = 0.0013  | max = 0.0019 (re-tri & marg)
+mean_time = 0.0064 | std = 0.0008 | 99th = 0.0083  | max = 0.0097 (total)
+./eval_time.sh: line 18: 1135908 Segmentation fault      (core dumped) rosrun ov_eval timing_flamegraph ${SCRIPT_DIR}/exp_euroc/timings/Mono-ORB/${bagnames[i]}/ORB.txt
 ================================= V1_02_medium =========================================
 ---------------- KLT ----------------
 Setting printing level to: INFO
@@ -43,7 +43,7 @@ mean_time = 0.0014 | std = 0.0005 | 99th = 0.0025  | max = 0.0052 (slam update)
 mean_time = 0.0009 | std = 0.0009 | 99th = 0.0030  | max = 0.0064 (slam delayed)
 mean_time = 0.0012 | std = 0.0003 | 99th = 0.0019  | max = 0.0039 (re-tri & marg)
 mean_time = 0.0080 | std = 0.0018 | 99th = 0.0121  | max = 0.0159 (total)
-./eval_time.sh: line 18: 35158 Segmentation fault      (core dumped) rosrun ov_eval timing_flamegraph ${SCRIPT_DIR}/exp_euroc/timings/Mono-KLT/${bagnames[i]}/KLT.txt
+./eval_time.sh: line 18: 1135962 Segmentation fault      (core dumped) rosrun ov_eval timing_flamegraph ${SCRIPT_DIR}/exp_euroc/timings/Mono-KLT/${bagnames[i]}/KLT.txt
 ---------------- NN ----------------
 Setting printing level to: INFO
 [TIME]: loaded 1607 timestamps from file (7 categories)!!
@@ -54,18 +54,18 @@ mean_time = 0.0002 | std = 0.0002 | 99th = 0.0008  | max = 0.0024 (slam update)
 mean_time = 0.0005 | std = 0.0006 | 99th = 0.0018  | max = 0.0078 (slam delayed)
 mean_time = 0.0023 | std = 0.0005 | 99th = 0.0035  | max = 0.0053 (re-tri & marg)
 mean_time = 0.2762 | std = 0.0123 | 99th = 0.3049  | max = 0.3136 (total)
-./eval_time.sh: line 18: 35201 Segmentation fault      (core dumped) rosrun ov_eval timing_flamegraph ${SCRIPT_DIR}/exp_euroc/timings/Mono-NN/${bagnames[i]}/NN.txt
+./eval_time.sh: line 18: 1136005 Segmentation fault      (core dumped) rosrun ov_eval timing_flamegraph ${SCRIPT_DIR}/exp_euroc/timings/Mono-NN/${bagnames[i]}/NN.txt
 ---------------- ORB ----------------
 Setting printing level to: INFO
 [TIME]: loaded 1606 timestamps from file (7 categories)!!
-mean_time = 0.0043 | std = 0.0010 | 99th = 0.0066  | max = 0.0090 (tracking)
-mean_time = 0.0001 | std = 0.0000 | 99th = 0.0002  | max = 0.0010 (propagation)
-mean_time = 0.0008 | std = 0.0004 | 99th = 0.0016  | max = 0.0046 (msckf update)
-mean_time = 0.0001 | std = 0.0001 | 99th = 0.0002  | max = 0.0005 (slam update)
-mean_time = 0.0001 | std = 0.0002 | 99th = 0.0006  | max = 0.0014 (slam delayed)
-mean_time = 0.0013 | std = 0.0004 | 99th = 0.0023  | max = 0.0064 (re-tri & marg)
-mean_time = 0.0067 | std = 0.0014 | 99th = 0.0100  | max = 0.0138 (total)
-./eval_time.sh: line 18: 35252 Segmentation fault      (core dumped) rosrun ov_eval timing_flamegraph ${SCRIPT_DIR}/exp_euroc/timings/Mono-ORB/${bagnames[i]}/ORB.txt
+mean_time = 0.0038 | std = 0.0008 | 99th = 0.0056  | max = 0.0073 (tracking)
+mean_time = 0.0001 | std = 0.0000 | 99th = 0.0001  | max = 0.0001 (propagation)
+mean_time = 0.0007 | std = 0.0003 | 99th = 0.0013  | max = 0.0017 (msckf update)
+mean_time = 0.0001 | std = 0.0001 | 99th = 0.0002  | max = 0.0004 (slam update)
+mean_time = 0.0001 | std = 0.0002 | 99th = 0.0005  | max = 0.0013 (slam delayed)
+mean_time = 0.0011 | std = 0.0002 | 99th = 0.0015  | max = 0.0022 (re-tri & marg)
+mean_time = 0.0058 | std = 0.0010 | 99th = 0.0080  | max = 0.0098 (total)
+./eval_time.sh: line 18: 1136054 Segmentation fault      (core dumped) rosrun ov_eval timing_flamegraph ${SCRIPT_DIR}/exp_euroc/timings/Mono-ORB/${bagnames[i]}/ORB.txt
 ================================= V1_03_difficult =========================================
 ---------------- KLT ----------------
 Setting printing level to: INFO
@@ -77,7 +77,7 @@ mean_time = 0.0010 | std = 0.0005 | 99th = 0.0023  | max = 0.0035 (slam update)
 mean_time = 0.0009 | std = 0.0009 | 99th = 0.0031  | max = 0.0103 (slam delayed)
 mean_time = 0.0011 | std = 0.0003 | 99th = 0.0018  | max = 0.0057 (re-tri & marg)
 mean_time = 0.0073 | std = 0.0023 | 99th = 0.0126  | max = 0.0182 (total)
-./eval_time.sh: line 18: 35295 Segmentation fault      (core dumped) rosrun ov_eval timing_flamegraph ${SCRIPT_DIR}/exp_euroc/timings/Mono-KLT/${bagnames[i]}/KLT.txt
+./eval_time.sh: line 18: 1136097 Segmentation fault      (core dumped) rosrun ov_eval timing_flamegraph ${SCRIPT_DIR}/exp_euroc/timings/Mono-KLT/${bagnames[i]}/KLT.txt
 ---------------- NN ----------------
 Setting printing level to: INFO
 [TIME]: loaded 2000 timestamps from file (7 categories)!!
@@ -88,18 +88,18 @@ mean_time = 0.0001 | std = 0.0002 | 99th = 0.0005  | max = 0.0026 (slam update)
 mean_time = 0.0003 | std = 0.0004 | 99th = 0.0013  | max = 0.0040 (slam delayed)
 mean_time = 0.0023 | std = 0.0005 | 99th = 0.0035  | max = 0.0050 (re-tri & marg)
 mean_time = 0.2747 | std = 0.0137 | 99th = 0.3067  | max = 0.3852 (total)
-./eval_time.sh: line 18: 35347 Segmentation fault      (core dumped) rosrun ov_eval timing_flamegraph ${SCRIPT_DIR}/exp_euroc/timings/Mono-NN/${bagnames[i]}/NN.txt
+./eval_time.sh: line 18: 1136140 Segmentation fault      (core dumped) rosrun ov_eval timing_flamegraph ${SCRIPT_DIR}/exp_euroc/timings/Mono-NN/${bagnames[i]}/NN.txt
 ---------------- ORB ----------------
 Setting printing level to: INFO
-[TIME]: loaded 2001 timestamps from file (7 categories)!!
-mean_time = 0.0045 | std = 0.0011 | 99th = 0.0071  | max = 0.0101 (tracking)
-mean_time = 0.0001 | std = 0.0000 | 99th = 0.0002  | max = 0.0008 (propagation)
-mean_time = 0.0007 | std = 0.0003 | 99th = 0.0014  | max = 0.0034 (msckf update)
-mean_time = 0.0000 | std = 0.0001 | 99th = 0.0002  | max = 0.0007 (slam update)
-mean_time = 0.0001 | std = 0.0002 | 99th = 0.0005  | max = 0.0018 (slam delayed)
-mean_time = 0.0014 | std = 0.0005 | 99th = 0.0024  | max = 0.0059 (re-tri & marg)
-mean_time = 0.0067 | std = 0.0016 | 99th = 0.0105  | max = 0.0128 (total)
-./eval_time.sh: line 18: 35401 Segmentation fault      (core dumped) rosrun ov_eval timing_flamegraph ${SCRIPT_DIR}/exp_euroc/timings/Mono-ORB/${bagnames[i]}/ORB.txt
+[TIME]: loaded 1968 timestamps from file (7 categories)!!
+mean_time = 0.0040 | std = 0.0009 | 99th = 0.0061  | max = 0.0102 (tracking)
+mean_time = 0.0001 | std = 0.0000 | 99th = 0.0001  | max = 0.0001 (propagation)
+mean_time = 0.0005 | std = 0.0002 | 99th = 0.0010  | max = 0.0019 (msckf update)
+mean_time = 0.0000 | std = 0.0001 | 99th = 0.0002  | max = 0.0005 (slam update)
+mean_time = 0.0001 | std = 0.0002 | 99th = 0.0004  | max = 0.0013 (slam delayed)
+mean_time = 0.0008 | std = 0.0002 | 99th = 0.0011  | max = 0.0016 (re-tri & marg)
+mean_time = 0.0054 | std = 0.0012 | 99th = 0.0081  | max = 0.0117 (total)
+./eval_time.sh: line 18: 1136183 Segmentation fault      (core dumped) rosrun ov_eval timing_flamegraph ${SCRIPT_DIR}/exp_euroc/timings/Mono-ORB/${bagnames[i]}/ORB.txt
 ================================= V2_01_easy =========================================
 ---------------- KLT ----------------
 Setting printing level to: INFO
@@ -111,7 +111,7 @@ mean_time = 0.0015 | std = 0.0005 | 99th = 0.0026  | max = 0.0049 (slam update)
 mean_time = 0.0005 | std = 0.0006 | 99th = 0.0018  | max = 0.0073 (slam delayed)
 mean_time = 0.0011 | std = 0.0003 | 99th = 0.0018  | max = 0.0050 (re-tri & marg)
 mean_time = 0.0071 | std = 0.0017 | 99th = 0.0110  | max = 0.0181 (total)
-./eval_time.sh: line 18: 35444 Segmentation fault      (core dumped) rosrun ov_eval timing_flamegraph ${SCRIPT_DIR}/exp_euroc/timings/Mono-KLT/${bagnames[i]}/KLT.txt
+./eval_time.sh: line 18: 1136239 Segmentation fault      (core dumped) rosrun ov_eval timing_flamegraph ${SCRIPT_DIR}/exp_euroc/timings/Mono-KLT/${bagnames[i]}/KLT.txt
 ---------------- NN ----------------
 Setting printing level to: INFO
 [TIME]: loaded 2125 timestamps from file (7 categories)!!
@@ -122,18 +122,18 @@ mean_time = 0.0004 | std = 0.0003 | 99th = 0.0011  | max = 0.0020 (slam update)
 mean_time = 0.0007 | std = 0.0006 | 99th = 0.0021  | max = 0.0038 (slam delayed)
 mean_time = 0.0020 | std = 0.0004 | 99th = 0.0031  | max = 0.0048 (re-tri & marg)
 mean_time = 0.2715 | std = 0.0131 | 99th = 0.3021  | max = 0.3216 (total)
-./eval_time.sh: line 18: 35487 Segmentation fault      (core dumped) rosrun ov_eval timing_flamegraph ${SCRIPT_DIR}/exp_euroc/timings/Mono-NN/${bagnames[i]}/NN.txt
+./eval_time.sh: line 18: 1136282 Segmentation fault      (core dumped) rosrun ov_eval timing_flamegraph ${SCRIPT_DIR}/exp_euroc/timings/Mono-NN/${bagnames[i]}/NN.txt
 ---------------- ORB ----------------
 Setting printing level to: INFO
-[TIME]: loaded 2134 timestamps from file (7 categories)!!
-mean_time = 0.0042 | std = 0.0010 | 99th = 0.0065  | max = 0.0107 (tracking)
-mean_time = 0.0001 | std = 0.0001 | 99th = 0.0002  | max = 0.0015 (propagation)
-mean_time = 0.0004 | std = 0.0002 | 99th = 0.0008  | max = 0.0032 (msckf update)
-mean_time = 0.0000 | std = 0.0001 | 99th = 0.0002  | max = 0.0010 (slam update)
-mean_time = 0.0001 | std = 0.0001 | 99th = 0.0003  | max = 0.0014 (slam delayed)
-mean_time = 0.0013 | std = 0.0004 | 99th = 0.0022  | max = 0.0054 (re-tri & marg)
-mean_time = 0.0061 | std = 0.0013 | 99th = 0.0091  | max = 0.0127 (total)
-./eval_time.sh: line 18: 35536 Segmentation fault      (core dumped) rosrun ov_eval timing_flamegraph ${SCRIPT_DIR}/exp_euroc/timings/Mono-ORB/${bagnames[i]}/ORB.txt
+[TIME]: loaded 2130 timestamps from file (7 categories)!!
+mean_time = 0.0037 | std = 0.0007 | 99th = 0.0054  | max = 0.0065 (tracking)
+mean_time = 0.0001 | std = 0.0000 | 99th = 0.0001  | max = 0.0002 (propagation)
+mean_time = 0.0005 | std = 0.0003 | 99th = 0.0011  | max = 0.0017 (msckf update)
+mean_time = 0.0001 | std = 0.0002 | 99th = 0.0005  | max = 0.0010 (slam update)
+mean_time = 0.0002 | std = 0.0003 | 99th = 0.0009  | max = 0.0021 (slam delayed)
+mean_time = 0.0007 | std = 0.0001 | 99th = 0.0011  | max = 0.0017 (re-tri & marg)
+mean_time = 0.0054 | std = 0.0012 | 99th = 0.0081  | max = 0.0093 (total)
+./eval_time.sh: line 18: 1136333 Segmentation fault      (core dumped) rosrun ov_eval timing_flamegraph ${SCRIPT_DIR}/exp_euroc/timings/Mono-ORB/${bagnames[i]}/ORB.txt
 ================================= V2_02_medium =========================================
 ---------------- KLT ----------------
 Setting printing level to: INFO
@@ -145,7 +145,7 @@ mean_time = 0.0013 | std = 0.0005 | 99th = 0.0025  | max = 0.0051 (slam update)
 mean_time = 0.0008 | std = 0.0008 | 99th = 0.0027  | max = 0.0082 (slam delayed)
 mean_time = 0.0011 | std = 0.0003 | 99th = 0.0018  | max = 0.0049 (re-tri & marg)
 mean_time = 0.0072 | std = 0.0018 | 99th = 0.0114  | max = 0.0158 (total)
-./eval_time.sh: line 18: 35579 Segmentation fault      (core dumped) rosrun ov_eval timing_flamegraph ${SCRIPT_DIR}/exp_euroc/timings/Mono-KLT/${bagnames[i]}/KLT.txt
+./eval_time.sh: line 18: 1136385 Segmentation fault      (core dumped) rosrun ov_eval timing_flamegraph ${SCRIPT_DIR}/exp_euroc/timings/Mono-KLT/${bagnames[i]}/KLT.txt
 ---------------- NN ----------------
 Setting printing level to: INFO
 [TIME]: loaded 2261 timestamps from file (7 categories)!!
@@ -156,18 +156,18 @@ mean_time = 0.0002 | std = 0.0003 | 99th = 0.0008  | max = 0.0022 (slam update)
 mean_time = 0.0005 | std = 0.0005 | 99th = 0.0018  | max = 0.0043 (slam delayed)
 mean_time = 0.0022 | std = 0.0005 | 99th = 0.0034  | max = 0.0050 (re-tri & marg)
 mean_time = 0.2707 | std = 0.0103 | 99th = 0.2946  | max = 0.3050 (total)
-./eval_time.sh: line 18: 35622 Segmentation fault      (core dumped) rosrun ov_eval timing_flamegraph ${SCRIPT_DIR}/exp_euroc/timings/Mono-NN/${bagnames[i]}/NN.txt
+./eval_time.sh: line 18: 1136428 Segmentation fault      (core dumped) rosrun ov_eval timing_flamegraph ${SCRIPT_DIR}/exp_euroc/timings/Mono-NN/${bagnames[i]}/NN.txt
 ---------------- ORB ----------------
 Setting printing level to: INFO
-[TIME]: loaded 2267 timestamps from file (7 categories)!!
-mean_time = 0.0041 | std = 0.0009 | 99th = 0.0063  | max = 0.0086 (tracking)
-mean_time = 0.0001 | std = 0.0000 | 99th = 0.0002  | max = 0.0004 (propagation)
-mean_time = 0.0007 | std = 0.0004 | 99th = 0.0016  | max = 0.0024 (msckf update)
-mean_time = 0.0001 | std = 0.0001 | 99th = 0.0004  | max = 0.0029 (slam update)
-mean_time = 0.0002 | std = 0.0003 | 99th = 0.0008  | max = 0.0039 (slam delayed)
-mean_time = 0.0013 | std = 0.0004 | 99th = 0.0021  | max = 0.0053 (re-tri & marg)
-mean_time = 0.0065 | std = 0.0014 | 99th = 0.0098  | max = 0.0123 (total)
-./eval_time.sh: line 18: 35665 Segmentation fault      (core dumped) rosrun ov_eval timing_flamegraph ${SCRIPT_DIR}/exp_euroc/timings/Mono-ORB/${bagnames[i]}/ORB.txt
+[TIME]: loaded 2264 timestamps from file (7 categories)!!
+mean_time = 0.0036 | std = 0.0007 | 99th = 0.0053  | max = 0.0058 (tracking)
+mean_time = 0.0001 | std = 0.0000 | 99th = 0.0001  | max = 0.0001 (propagation)
+mean_time = 0.0006 | std = 0.0003 | 99th = 0.0013  | max = 0.0018 (msckf update)
+mean_time = 0.0001 | std = 0.0001 | 99th = 0.0003  | max = 0.0010 (slam update)
+mean_time = 0.0002 | std = 0.0002 | 99th = 0.0007  | max = 0.0020 (slam delayed)
+mean_time = 0.0009 | std = 0.0002 | 99th = 0.0013  | max = 0.0022 (re-tri & marg)
+mean_time = 0.0054 | std = 0.0010 | 99th = 0.0078  | max = 0.0088 (total)
+./eval_time.sh: line 18: 1136471 Segmentation fault      (core dumped) rosrun ov_eval timing_flamegraph ${SCRIPT_DIR}/exp_euroc/timings/Mono-ORB/${bagnames[i]}/ORB.txt
 ================================= V2_03_difficult =========================================
 ---------------- KLT ----------------
 Setting printing level to: INFO
@@ -179,7 +179,7 @@ mean_time = 0.0007 | std = 0.0006 | 99th = 0.0022  | max = 0.0049 (slam update)
 mean_time = 0.0007 | std = 0.0009 | 99th = 0.0027  | max = 0.0116 (slam delayed)
 mean_time = 0.0009 | std = 0.0003 | 99th = 0.0015  | max = 0.0051 (re-tri & marg)
 mean_time = 0.0061 | std = 0.0025 | 99th = 0.0119  | max = 0.0174 (total)
-./eval_time.sh: line 18: 35708 Segmentation fault      (core dumped) rosrun ov_eval timing_flamegraph ${SCRIPT_DIR}/exp_euroc/timings/Mono-KLT/${bagnames[i]}/KLT.txt
+./eval_time.sh: line 18: 1136514 Segmentation fault      (core dumped) rosrun ov_eval timing_flamegraph ${SCRIPT_DIR}/exp_euroc/timings/Mono-KLT/${bagnames[i]}/KLT.txt
 ---------------- NN ----------------
 Setting printing level to: INFO
 [TIME]: loaded 1741 timestamps from file (7 categories)!!
@@ -190,18 +190,18 @@ mean_time = 0.0001 | std = 0.0002 | 99th = 0.0005  | max = 0.0014 (slam update)
 mean_time = 0.0002 | std = 0.0004 | 99th = 0.0011  | max = 0.0029 (slam delayed)
 mean_time = 0.0021 | std = 0.0006 | 99th = 0.0034  | max = 0.0058 (re-tri & marg)
 mean_time = 0.2590 | std = 0.0215 | 99th = 0.3090  | max = 0.3124 (total)
-./eval_time.sh: line 18: 35751 Segmentation fault      (core dumped) rosrun ov_eval timing_flamegraph ${SCRIPT_DIR}/exp_euroc/timings/Mono-NN/${bagnames[i]}/NN.txt
+./eval_time.sh: line 18: 1136557 Segmentation fault      (core dumped) rosrun ov_eval timing_flamegraph ${SCRIPT_DIR}/exp_euroc/timings/Mono-NN/${bagnames[i]}/NN.txt
 ---------------- ORB ----------------
 Setting printing level to: INFO
-[TIME]: loaded 1804 timestamps from file (7 categories)!!
-mean_time = 0.0037 | std = 0.0012 | 99th = 0.0066  | max = 0.0090 (tracking)
-mean_time = 0.0001 | std = 0.0000 | 99th = 0.0002  | max = 0.0005 (propagation)
-mean_time = 0.0005 | std = 0.0003 | 99th = 0.0012  | max = 0.0025 (msckf update)
-mean_time = 0.0000 | std = 0.0001 | 99th = 0.0002  | max = 0.0005 (slam update)
-mean_time = 0.0001 | std = 0.0002 | 99th = 0.0005  | max = 0.0024 (slam delayed)
-mean_time = 0.0011 | std = 0.0004 | 99th = 0.0020  | max = 0.0051 (re-tri & marg)
-mean_time = 0.0055 | std = 0.0016 | 99th = 0.0093  | max = 0.0112 (total)
-./eval_time.sh: line 18: 35794 Segmentation fault      (core dumped) rosrun ov_eval timing_flamegraph ${SCRIPT_DIR}/exp_euroc/timings/Mono-ORB/${bagnames[i]}/ORB.txt
+[TIME]: loaded 1754 timestamps from file (7 categories)!!
+mean_time = 0.0032 | std = 0.0011 | 99th = 0.0057  | max = 0.0085 (tracking)
+mean_time = 0.0001 | std = 0.0000 | 99th = 0.0001  | max = 0.0001 (propagation)
+mean_time = 0.0002 | std = 0.0001 | 99th = 0.0004  | max = 0.0007 (msckf update)
+mean_time = 0.0000 | std = 0.0000 | 99th = 0.0000  | max = 0.0000 (slam update)
+mean_time = 0.0000 | std = 0.0000 | 99th = 0.0001  | max = 0.0003 (slam delayed)
+mean_time = 0.0007 | std = 0.0002 | 99th = 0.0012  | max = 0.0013 (re-tri & marg)
+mean_time = 0.0042 | std = 0.0012 | 99th = 0.0071  | max = 0.0097 (total)
+./eval_time.sh: line 18: 1136600 Segmentation fault      (core dumped) rosrun ov_eval timing_flamegraph ${SCRIPT_DIR}/exp_euroc/timings/Mono-ORB/${bagnames[i]}/ORB.txt
 ================================= MH_01_easy =========================================
 ---------------- KLT ----------------
 Setting printing level to: INFO
@@ -213,7 +213,7 @@ mean_time = 0.0016 | std = 0.0004 | 99th = 0.0026  | max = 0.0052 (slam update)
 mean_time = 0.0004 | std = 0.0005 | 99th = 0.0017  | max = 0.0076 (slam delayed)
 mean_time = 0.0013 | std = 0.0003 | 99th = 0.0021  | max = 0.0052 (re-tri & marg)
 mean_time = 0.0074 | std = 0.0018 | 99th = 0.0115  | max = 0.0154 (total)
-./eval_time.sh: line 18: 35837 Segmentation fault      (core dumped) rosrun ov_eval timing_flamegraph ${SCRIPT_DIR}/exp_euroc/timings/Mono-KLT/${bagnames[i]}/KLT.txt
+./eval_time.sh: line 18: 1136643 Segmentation fault      (core dumped) rosrun ov_eval timing_flamegraph ${SCRIPT_DIR}/exp_euroc/timings/Mono-KLT/${bagnames[i]}/KLT.txt
 ---------------- NN ----------------
 Setting printing level to: INFO
 [TIME]: loaded 3636 timestamps from file (7 categories)!!
@@ -224,18 +224,18 @@ mean_time = 0.0002 | std = 0.0002 | 99th = 0.0007  | max = 0.0016 (slam update)
 mean_time = 0.0004 | std = 0.0004 | 99th = 0.0014  | max = 0.0050 (slam delayed)
 mean_time = 0.0019 | std = 0.0004 | 99th = 0.0028  | max = 0.0064 (re-tri & marg)
 mean_time = 0.2652 | std = 0.0087 | 99th = 0.2854  | max = 0.3748 (total)
-./eval_time.sh: line 18: 35889 Segmentation fault      (core dumped) rosrun ov_eval timing_flamegraph ${SCRIPT_DIR}/exp_euroc/timings/Mono-NN/${bagnames[i]}/NN.txt
+./eval_time.sh: line 18: 1136686 Segmentation fault      (core dumped) rosrun ov_eval timing_flamegraph ${SCRIPT_DIR}/exp_euroc/timings/Mono-NN/${bagnames[i]}/NN.txt
 ---------------- ORB ----------------
 Setting printing level to: INFO
-[TIME]: loaded 3615 timestamps from file (7 categories)!!
-mean_time = 0.0048 | std = 0.0007 | 99th = 0.0065  | max = 0.0086 (tracking)
-mean_time = 0.0001 | std = 0.0000 | 99th = 0.0002  | max = 0.0008 (propagation)
-mean_time = 0.0004 | std = 0.0001 | 99th = 0.0007  | max = 0.0034 (msckf update)
-mean_time = 0.0000 | std = 0.0000 | 99th = 0.0000  | max = 0.0001 (slam update)
-mean_time = 0.0001 | std = 0.0000 | 99th = 0.0002  | max = 0.0009 (slam delayed)
-mean_time = 0.0013 | std = 0.0004 | 99th = 0.0021  | max = 0.0046 (re-tri & marg)
-mean_time = 0.0066 | std = 0.0010 | 99th = 0.0088  | max = 0.0113 (total)
-./eval_time.sh: line 18: 35943 Segmentation fault      (core dumped) rosrun ov_eval timing_flamegraph ${SCRIPT_DIR}/exp_euroc/timings/Mono-ORB/${bagnames[i]}/ORB.txt
+[TIME]: loaded 3634 timestamps from file (7 categories)!!
+mean_time = 0.0045 | std = 0.0003 | 99th = 0.0051  | max = 0.0068 (tracking)
+mean_time = 0.0001 | std = 0.0000 | 99th = 0.0001  | max = 0.0002 (propagation)
+mean_time = 0.0005 | std = 0.0003 | 99th = 0.0011  | max = 0.0019 (msckf update)
+mean_time = 0.0001 | std = 0.0002 | 99th = 0.0005  | max = 0.0013 (slam update)
+mean_time = 0.0002 | std = 0.0003 | 99th = 0.0008  | max = 0.0028 (slam delayed)
+mean_time = 0.0011 | std = 0.0002 | 99th = 0.0017  | max = 0.0023 (re-tri & marg)
+mean_time = 0.0065 | std = 0.0007 | 99th = 0.0081  | max = 0.0113 (total)
+./eval_time.sh: line 18: 1136729 Segmentation fault      (core dumped) rosrun ov_eval timing_flamegraph ${SCRIPT_DIR}/exp_euroc/timings/Mono-ORB/${bagnames[i]}/ORB.txt
 ================================= MH_02_easy =========================================
 ---------------- KLT ----------------
 Setting printing level to: INFO
@@ -247,7 +247,7 @@ mean_time = 0.0015 | std = 0.0004 | 99th = 0.0025  | max = 0.0053 (slam update)
 mean_time = 0.0005 | std = 0.0006 | 99th = 0.0018  | max = 0.0063 (slam delayed)
 mean_time = 0.0013 | std = 0.0003 | 99th = 0.0020  | max = 0.0053 (re-tri & marg)
 mean_time = 0.0074 | std = 0.0018 | 99th = 0.0117  | max = 0.0163 (total)
-./eval_time.sh: line 18: 35986 Segmentation fault      (core dumped) rosrun ov_eval timing_flamegraph ${SCRIPT_DIR}/exp_euroc/timings/Mono-KLT/${bagnames[i]}/KLT.txt
+./eval_time.sh: line 18: 1136783 Segmentation fault      (core dumped) rosrun ov_eval timing_flamegraph ${SCRIPT_DIR}/exp_euroc/timings/Mono-KLT/${bagnames[i]}/KLT.txt
 ---------------- NN ----------------
 Setting printing level to: INFO
 [TIME]: loaded 2994 timestamps from file (7 categories)!!
@@ -258,18 +258,18 @@ mean_time = 0.0002 | std = 0.0002 | 99th = 0.0007  | max = 0.0038 (slam update)
 mean_time = 0.0004 | std = 0.0004 | 99th = 0.0014  | max = 0.0034 (slam delayed)
 mean_time = 0.0019 | std = 0.0004 | 99th = 0.0027  | max = 0.0044 (re-tri & marg)
 mean_time = 0.2621 | std = 0.0096 | 99th = 0.2844  | max = 0.3144 (total)
-./eval_time.sh: line 18: 36029 Segmentation fault      (core dumped) rosrun ov_eval timing_flamegraph ${SCRIPT_DIR}/exp_euroc/timings/Mono-NN/${bagnames[i]}/NN.txt
+./eval_time.sh: line 18: 1136826 Segmentation fault      (core dumped) rosrun ov_eval timing_flamegraph ${SCRIPT_DIR}/exp_euroc/timings/Mono-NN/${bagnames[i]}/NN.txt
 ---------------- ORB ----------------
 Setting printing level to: INFO
-[TIME]: loaded 2990 timestamps from file (7 categories)!!
-mean_time = 0.0047 | std = 0.0008 | 99th = 0.0065  | max = 0.0093 (tracking)
-mean_time = 0.0001 | std = 0.0000 | 99th = 0.0002  | max = 0.0007 (propagation)
-mean_time = 0.0004 | std = 0.0001 | 99th = 0.0007  | max = 0.0016 (msckf update)
-mean_time = 0.0000 | std = 0.0000 | 99th = 0.0000  | max = 0.0000 (slam update)
-mean_time = 0.0000 | std = 0.0000 | 99th = 0.0001  | max = 0.0003 (slam delayed)
-mean_time = 0.0012 | std = 0.0003 | 99th = 0.0020  | max = 0.0051 (re-tri & marg)
-mean_time = 0.0065 | std = 0.0010 | 99th = 0.0088  | max = 0.0124 (total)
-./eval_time.sh: line 18: 36078 Segmentation fault      (core dumped) rosrun ov_eval timing_flamegraph ${SCRIPT_DIR}/exp_euroc/timings/Mono-ORB/${bagnames[i]}/ORB.txt
+[TIME]: loaded 2994 timestamps from file (7 categories)!!
+mean_time = 0.0043 | std = 0.0003 | 99th = 0.0051  | max = 0.0067 (tracking)
+mean_time = 0.0001 | std = 0.0000 | 99th = 0.0001  | max = 0.0002 (propagation)
+mean_time = 0.0005 | std = 0.0003 | 99th = 0.0012  | max = 0.0018 (msckf update)
+mean_time = 0.0002 | std = 0.0002 | 99th = 0.0006  | max = 0.0013 (slam update)
+mean_time = 0.0002 | std = 0.0003 | 99th = 0.0009  | max = 0.0025 (slam delayed)
+mean_time = 0.0009 | std = 0.0001 | 99th = 0.0011  | max = 0.0014 (re-tri & marg)
+mean_time = 0.0062 | std = 0.0008 | 99th = 0.0080  | max = 0.0098 (total)
+./eval_time.sh: line 18: 1136875 Segmentation fault      (core dumped) rosrun ov_eval timing_flamegraph ${SCRIPT_DIR}/exp_euroc/timings/Mono-ORB/${bagnames[i]}/ORB.txt
 ================================= MH_03_medium =========================================
 ---------------- KLT ----------------
 Setting printing level to: INFO
@@ -281,7 +281,7 @@ mean_time = 0.0015 | std = 0.0005 | 99th = 0.0026  | max = 0.0062 (slam update)
 mean_time = 0.0006 | std = 0.0007 | 99th = 0.0021  | max = 0.0053 (slam delayed)
 mean_time = 0.0013 | std = 0.0003 | 99th = 0.0020  | max = 0.0050 (re-tri & marg)
 mean_time = 0.0077 | std = 0.0019 | 99th = 0.0121  | max = 0.0176 (total)
-./eval_time.sh: line 18: 36121 Segmentation fault      (core dumped) rosrun ov_eval timing_flamegraph ${SCRIPT_DIR}/exp_euroc/timings/Mono-KLT/${bagnames[i]}/KLT.txt
+./eval_time.sh: line 18: 1136927 Segmentation fault      (core dumped) rosrun ov_eval timing_flamegraph ${SCRIPT_DIR}/exp_euroc/timings/Mono-KLT/${bagnames[i]}/KLT.txt
 ---------------- NN ----------------
 Setting printing level to: INFO
 [TIME]: loaded 2619 timestamps from file (7 categories)!!
@@ -292,18 +292,18 @@ mean_time = 0.0002 | std = 0.0002 | 99th = 0.0007  | max = 0.0016 (slam update)
 mean_time = 0.0005 | std = 0.0005 | 99th = 0.0016  | max = 0.0039 (slam delayed)
 mean_time = 0.0020 | std = 0.0004 | 99th = 0.0029  | max = 0.0041 (re-tri & marg)
 mean_time = 0.2697 | std = 0.0101 | 99th = 0.2932  | max = 0.3111 (total)
-./eval_time.sh: line 18: 36164 Segmentation fault      (core dumped) rosrun ov_eval timing_flamegraph ${SCRIPT_DIR}/exp_euroc/timings/Mono-NN/${bagnames[i]}/NN.txt
+./eval_time.sh: line 18: 1136970 Segmentation fault      (core dumped) rosrun ov_eval timing_flamegraph ${SCRIPT_DIR}/exp_euroc/timings/Mono-NN/${bagnames[i]}/NN.txt
 ---------------- ORB ----------------
 Setting printing level to: INFO
 [TIME]: loaded 2619 timestamps from file (7 categories)!!
-mean_time = 0.0047 | std = 0.0007 | 99th = 0.0064  | max = 0.0091 (tracking)
-mean_time = 0.0001 | std = 0.0000 | 99th = 0.0002  | max = 0.0013 (propagation)
-mean_time = 0.0008 | std = 0.0004 | 99th = 0.0018  | max = 0.0047 (msckf update)
-mean_time = 0.0001 | std = 0.0001 | 99th = 0.0005  | max = 0.0015 (slam update)
-mean_time = 0.0002 | std = 0.0003 | 99th = 0.0010  | max = 0.0031 (slam delayed)
-mean_time = 0.0014 | std = 0.0004 | 99th = 0.0023  | max = 0.0056 (re-tri & marg)
-mean_time = 0.0074 | std = 0.0012 | 99th = 0.0102  | max = 0.0134 (total)
-./eval_time.sh: line 18: 36207 Segmentation fault      (core dumped) rosrun ov_eval timing_flamegraph ${SCRIPT_DIR}/exp_euroc/timings/Mono-ORB/${bagnames[i]}/ORB.txt
+mean_time = 0.0042 | std = 0.0004 | 99th = 0.0052  | max = 0.0067 (tracking)
+mean_time = 0.0001 | std = 0.0000 | 99th = 0.0001  | max = 0.0001 (propagation)
+mean_time = 0.0007 | std = 0.0003 | 99th = 0.0015  | max = 0.0019 (msckf update)
+mean_time = 0.0001 | std = 0.0001 | 99th = 0.0004  | max = 0.0012 (slam update)
+mean_time = 0.0002 | std = 0.0003 | 99th = 0.0009  | max = 0.0031 (slam delayed)
+mean_time = 0.0013 | std = 0.0001 | 99th = 0.0016  | max = 0.0026 (re-tri & marg)
+mean_time = 0.0066 | std = 0.0007 | 99th = 0.0083  | max = 0.0108 (total)
+./eval_time.sh: line 18: 1137013 Segmentation fault      (core dumped) rosrun ov_eval timing_flamegraph ${SCRIPT_DIR}/exp_euroc/timings/Mono-ORB/${bagnames[i]}/ORB.txt
 ================================= MH_04_difficult =========================================
 ---------------- KLT ----------------
 Setting printing level to: INFO
@@ -315,7 +315,7 @@ mean_time = 0.0014 | std = 0.0005 | 99th = 0.0026  | max = 0.0047 (slam update)
 mean_time = 0.0005 | std = 0.0006 | 99th = 0.0019  | max = 0.0061 (slam delayed)
 mean_time = 0.0012 | std = 0.0003 | 99th = 0.0019  | max = 0.0044 (re-tri & marg)
 mean_time = 0.0071 | std = 0.0020 | 99th = 0.0117  | max = 0.0141 (total)
-./eval_time.sh: line 18: 36250 Segmentation fault      (core dumped) rosrun ov_eval timing_flamegraph ${SCRIPT_DIR}/exp_euroc/timings/Mono-KLT/${bagnames[i]}/KLT.txt
+./eval_time.sh: line 18: 1137056 Segmentation fault      (core dumped) rosrun ov_eval timing_flamegraph ${SCRIPT_DIR}/exp_euroc/timings/Mono-KLT/${bagnames[i]}/KLT.txt
 ---------------- NN ----------------
 Setting printing level to: INFO
 [TIME]: loaded 1912 timestamps from file (7 categories)!!
@@ -326,18 +326,18 @@ mean_time = 0.0003 | std = 0.0003 | 99th = 0.0011  | max = 0.0022 (slam update)
 mean_time = 0.0006 | std = 0.0006 | 99th = 0.0020  | max = 0.0040 (slam delayed)
 mean_time = 0.0019 | std = 0.0004 | 99th = 0.0027  | max = 0.0045 (re-tri & marg)
 mean_time = 0.2628 | std = 0.0105 | 99th = 0.2872  | max = 0.3288 (total)
-./eval_time.sh: line 18: 36293 Segmentation fault      (core dumped) rosrun ov_eval timing_flamegraph ${SCRIPT_DIR}/exp_euroc/timings/Mono-NN/${bagnames[i]}/NN.txt
+./eval_time.sh: line 18: 1137099 Segmentation fault      (core dumped) rosrun ov_eval timing_flamegraph ${SCRIPT_DIR}/exp_euroc/timings/Mono-NN/${bagnames[i]}/NN.txt
 ---------------- ORB ----------------
 Setting printing level to: INFO
-[TIME]: loaded 1957 timestamps from file (7 categories)!!
-mean_time = 0.0046 | std = 0.0007 | 99th = 0.0063  | max = 0.0084 (tracking)
-mean_time = 0.0001 | std = 0.0000 | 99th = 0.0002  | max = 0.0003 (propagation)
-mean_time = 0.0004 | std = 0.0001 | 99th = 0.0007  | max = 0.0012 (msckf update)
-mean_time = 0.0000 | std = 0.0000 | 99th = 0.0000  | max = 0.0003 (slam update)
-mean_time = 0.0000 | std = 0.0001 | 99th = 0.0002  | max = 0.0010 (slam delayed)
-mean_time = 0.0014 | std = 0.0004 | 99th = 0.0023  | max = 0.0049 (re-tri & marg)
-mean_time = 0.0065 | std = 0.0010 | 99th = 0.0089  | max = 0.0108 (total)
-./eval_time.sh: line 18: 36336 Segmentation fault      (core dumped) rosrun ov_eval timing_flamegraph ${SCRIPT_DIR}/exp_euroc/timings/Mono-ORB/${bagnames[i]}/ORB.txt
+[TIME]: loaded 1946 timestamps from file (7 categories)!!
+mean_time = 0.0041 | std = 0.0004 | 99th = 0.0050  | max = 0.0063 (tracking)
+mean_time = 0.0001 | std = 0.0000 | 99th = 0.0001  | max = 0.0001 (propagation)
+mean_time = 0.0003 | std = 0.0001 | 99th = 0.0007  | max = 0.0014 (msckf update)
+mean_time = 0.0000 | std = 0.0000 | 99th = 0.0001  | max = 0.0003 (slam update)
+mean_time = 0.0001 | std = 0.0001 | 99th = 0.0003  | max = 0.0012 (slam delayed)
+mean_time = 0.0008 | std = 0.0001 | 99th = 0.0010  | max = 0.0016 (re-tri & marg)
+mean_time = 0.0053 | std = 0.0006 | 99th = 0.0067  | max = 0.0078 (total)
+./eval_time.sh: line 18: 1137142 Segmentation fault      (core dumped) rosrun ov_eval timing_flamegraph ${SCRIPT_DIR}/exp_euroc/timings/Mono-ORB/${bagnames[i]}/ORB.txt
 ================================= MH_05_difficult =========================================
 ---------------- KLT ----------------
 Setting printing level to: INFO
@@ -349,7 +349,7 @@ mean_time = 0.0014 | std = 0.0005 | 99th = 0.0026  | max = 0.0054 (slam update)
 mean_time = 0.0005 | std = 0.0006 | 99th = 0.0019  | max = 0.0044 (slam delayed)
 mean_time = 0.0012 | std = 0.0003 | 99th = 0.0019  | max = 0.0049 (re-tri & marg)
 mean_time = 0.0073 | std = 0.0019 | 99th = 0.0118  | max = 0.0164 (total)
-./eval_time.sh: line 18: 36379 Segmentation fault      (core dumped) rosrun ov_eval timing_flamegraph ${SCRIPT_DIR}/exp_euroc/timings/Mono-KLT/${bagnames[i]}/KLT.txt
+./eval_time.sh: line 18: 1137185 Segmentation fault      (core dumped) rosrun ov_eval timing_flamegraph ${SCRIPT_DIR}/exp_euroc/timings/Mono-KLT/${bagnames[i]}/KLT.txt
 ---------------- NN ----------------
 Setting printing level to: INFO
 [TIME]: loaded 2167 timestamps from file (7 categories)!!
@@ -360,15 +360,15 @@ mean_time = 0.0000 | std = 0.0000 | 99th = 0.0001  | max = 0.0003 (slam update)
 mean_time = 0.0001 | std = 0.0001 | 99th = 0.0004  | max = 0.0048 (slam delayed)
 mean_time = 0.0020 | std = 0.0004 | 99th = 0.0030  | max = 0.0077 (re-tri & marg)
 mean_time = 0.2688 | std = 0.0117 | 99th = 0.2960  | max = 0.3382 (total)
-./eval_time.sh: line 18: 36429 Segmentation fault      (core dumped) rosrun ov_eval timing_flamegraph ${SCRIPT_DIR}/exp_euroc/timings/Mono-NN/${bagnames[i]}/NN.txt
+./eval_time.sh: line 18: 1137228 Segmentation fault      (core dumped) rosrun ov_eval timing_flamegraph ${SCRIPT_DIR}/exp_euroc/timings/Mono-NN/${bagnames[i]}/NN.txt
 ---------------- ORB ----------------
 Setting printing level to: INFO
 [TIME]: loaded 2167 timestamps from file (7 categories)!!
-mean_time = 0.0046 | std = 0.0008 | 99th = 0.0064  | max = 0.0091 (tracking)
-mean_time = 0.0001 | std = 0.0000 | 99th = 0.0002  | max = 0.0004 (propagation)
-mean_time = 0.0004 | std = 0.0002 | 99th = 0.0009  | max = 0.0031 (msckf update)
-mean_time = 0.0000 | std = 0.0001 | 99th = 0.0001  | max = 0.0007 (slam update)
-mean_time = 0.0001 | std = 0.0001 | 99th = 0.0004  | max = 0.0018 (slam delayed)
-mean_time = 0.0014 | std = 0.0004 | 99th = 0.0023  | max = 0.0060 (re-tri & marg)
-mean_time = 0.0067 | std = 0.0011 | 99th = 0.0092  | max = 0.0119 (total)
-./eval_time.sh: line 18: 36483 Segmentation fault      (core dumped) rosrun ov_eval timing_flamegraph ${SCRIPT_DIR}/exp_euroc/timings/Mono-ORB/${bagnames[i]}/ORB.txt
+mean_time = 0.0041 | std = 0.0003 | 99th = 0.0049  | max = 0.0055 (tracking)
+mean_time = 0.0001 | std = 0.0000 | 99th = 0.0001  | max = 0.0001 (propagation)
+mean_time = 0.0003 | std = 0.0001 | 99th = 0.0004  | max = 0.0009 (msckf update)
+mean_time = 0.0000 | std = 0.0000 | 99th = 0.0000  | max = 0.0000 (slam update)
+mean_time = 0.0000 | std = 0.0000 | 99th = 0.0001  | max = 0.0007 (slam delayed)
+mean_time = 0.0012 | std = 0.0001 | 99th = 0.0015  | max = 0.0017 (re-tri & marg)
+mean_time = 0.0058 | std = 0.0004 | 99th = 0.0068  | max = 0.0072 (total)
+./eval_time.sh: line 18: 1137271 Segmentation fault      (core dumped) rosrun ov_eval timing_flamegraph ${SCRIPT_DIR}/exp_euroc/timings/Mono-ORB/${bagnames[i]}/ORB.txt

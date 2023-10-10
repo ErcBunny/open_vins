@@ -138,7 +138,7 @@ VioManager::VioManager(VioManagerOptions &params_) : thread_init_running(false),
                                                                params.fast_threshold, params.grid_x, params.grid_y, params.min_px_dist));
       } else {
           trackFEATS = std::shared_ptr<TrackBase>(new TrackDescriptor(
-                  state->_cam_intrinsics_cameras, init_max_features, state->_options.max_aruco_features, params.use_stereo, params.histogram_method,
+                  state->_cam_intrinsics_cameras, params.num_pts, state->_options.max_aruco_features, params.use_stereo, params.histogram_method,
                   params.fast_threshold, params.grid_x, params.grid_y, params.min_px_dist, params.knn_ratio));
       }
   }

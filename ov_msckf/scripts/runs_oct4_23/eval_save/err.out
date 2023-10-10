@@ -2,8 +2,8 @@ Setting printing level to: INFO
 [COMP]: 2895 poses in V1_01_easy => length of 58.35 meters
 [COMP]: 2769 poses in KLT => length of 57.21 meters
 [COMP]: 2778 poses in NN => length of 57.61 meters
-[COMP]: 2775 poses in ORB => length of 58.90 meters
-./eval_err.sh: line 15: 23035 Segmentation fault      (core dumped) rosrun ov_eval plot_trajectories posyaw ${SCRIPT_DIR}/../../../ov_data/euroc_mav/V1_01_easy.txt ${SCRIPT_DIR}/exp_euroc/algorithms/Mono-KLT/V1_01_easy/KLT.txt ${SCRIPT_DIR}/exp_euroc/algorithms/Mono-NN/V1_01_easy/NN.txt ${SCRIPT_DIR}/exp_euroc/algorithms/Mono-ORB/V1_01_easy/ORB.txt
+[COMP]: 2777 poses in ORB => length of 58.55 meters
+./eval_err.sh: line 15: 1129325 Segmentation fault      (core dumped) rosrun ov_eval plot_trajectories posyaw ${SCRIPT_DIR}/../../../ov_data/euroc_mav/V1_01_easy.txt ${SCRIPT_DIR}/exp_euroc/algorithms/Mono-KLT/V1_01_easy/KLT.txt ${SCRIPT_DIR}/exp_euroc/algorithms/Mono-NN/V1_01_easy/NN.txt ${SCRIPT_DIR}/exp_euroc/algorithms/Mono-ORB/V1_01_easy/ORB.txt
 Setting printing level to: INFO
 [COMP]: 2895 poses in V1_01_easy => length of 58.35 meters
 ======================================
@@ -36,18 +36,18 @@ Setting printing level to: INFO
         NEES: mean_ori = 65.865 | mean_pos = 1.157
 ======================================
 [COMP]: processing Mono-ORB algorithm
-        ATE: mean_ori = 1.221 | mean_pos = 0.131 (1 runs)
+        ATE: mean_ori = 1.165 | mean_pos = 0.129 (1 runs)
         ATE: std_ori  = -nan | std_pos  = -nan
-        ATE 2D: mean_ori = 1.132 | mean_pos = 0.127 (1 runs)
+        ATE 2D: mean_ori = 1.090 | mean_pos = 0.125 (1 runs)
         ATE 2D: std_ori  = -nan | std_pos  = -nan
-        RPE: seg 7 - mean_ori = 0.840 | mean_pos = 0.109 (2419 samples)
-        RPE: seg 14 - mean_ori = 1.034 | mean_pos = 0.123 (2159 samples)
-        RPE: seg 21 - mean_ori = 1.177 | mean_pos = 0.162 (1887 samples)
-        RPE: seg 28 - mean_ori = 1.261 | mean_pos = 0.191 (1601 samples)
-        RPE: seg 35 - mean_ori = 1.348 | mean_pos = 0.226 (1305 samples)
-        RMSE: mean_ori = 1.133 | mean_pos = 0.112
-        RMSE 2D: mean_ori = 0.991 | mean_pos = 0.105
-        NEES: mean_ori = 70.935 | mean_pos = 4.087
+        RPE: seg 7 - mean_ori = 0.827 | mean_pos = 0.105 (2421 samples)
+        RPE: seg 14 - mean_ori = 1.002 | mean_pos = 0.122 (2161 samples)
+        RPE: seg 21 - mean_ori = 1.141 | mean_pos = 0.161 (1889 samples)
+        RPE: seg 28 - mean_ori = 1.229 | mean_pos = 0.189 (1603 samples)
+        RPE: seg 35 - mean_ori = 1.295 | mean_pos = 0.225 (1307 samples)
+        RMSE: mean_ori = 1.072 | mean_pos = 0.111
+        RMSE 2D: mean_ori = 0.952 | mean_pos = 0.104
+        NEES: mean_ori = 65.192 | mean_pos = 3.902
 
 
 ============================================
@@ -56,7 +56,7 @@ ATE AND NEES LATEX TABLE
  & \textbf{ATE (deg/m)} & \textbf{NEES (deg/m)} \\\hline
 Mono-KLT & 0.825 / 0.060 & 133.387 / 1.209 \\
 Mono-NN & 1.017 / 0.065 & 65.865 / 1.157 \\
-Mono-ORB & 1.221 / 0.131 & 70.935 / 4.087 \\
+Mono-ORB & 1.165 / 0.129 & 65.192 / 3.902 \\
 ============================================
 ============================================
 RPE LATEX TABLE
@@ -64,17 +64,17 @@ RPE LATEX TABLE
  & \textbf{7m} & \textbf{14m} & \textbf{21m} & \textbf{28m} & \textbf{35m} \\\hline
 Mono-KLT & 0.689 / 0.061 & 0.705 / 0.056 & 0.816 / 0.083 & 1.038 / 0.091 & 1.153 / 0.103 \\
 Mono-NN & 0.808 / 0.086 & 1.054 / 0.085 & 1.236 / 0.086 & 1.356 / 0.085 & 1.324 / 0.109 \\
-Mono-ORB & 0.840 / 0.109 & 1.034 / 0.123 & 1.177 / 0.162 & 1.261 / 0.191 & 1.348 / 0.226 \\
+Mono-ORB & 0.827 / 0.105 & 1.002 / 0.122 & 1.141 / 0.161 & 1.229 / 0.189 & 1.295 / 0.225 \\
 ============================================
 
 ---------------------------------------------------------------------------------
-./eval_err.sh: line 19: 23085 Segmentation fault      (core dumped) rosrun ov_eval error_dataset posyaw ${SCRIPT_DIR}/../../../ov_data/euroc_mav/V1_01_easy.txt ${SCRIPT_DIR}/exp_euroc/algorithms/
+./eval_err.sh: line 19: 1129376 Segmentation fault      (core dumped) rosrun ov_eval error_dataset posyaw ${SCRIPT_DIR}/../../../ov_data/euroc_mav/V1_01_easy.txt ${SCRIPT_DIR}/exp_euroc/algorithms/
 Setting printing level to: INFO
 [COMP]: 16702 poses in V1_02_medium => length of 75.89 meters
 [COMP]: 1578 poses in KLT => length of 75.08 meters
 [COMP]: 1589 poses in NN => length of 74.92 meters
-[COMP]: 1588 poses in ORB => length of 75.14 meters
-./eval_err.sh: line 27: 23141 Segmentation fault      (core dumped) rosrun ov_eval plot_trajectories posyaw ${SCRIPT_DIR}/../../../ov_data/euroc_mav/V1_02_medium.txt ${SCRIPT_DIR}/exp_euroc/algorithms/Mono-KLT/V1_02_medium/KLT.txt ${SCRIPT_DIR}/exp_euroc/algorithms/Mono-NN/V1_02_medium/NN.txt ${SCRIPT_DIR}/exp_euroc/algorithms/Mono-ORB/V1_02_medium/ORB.txt
+[COMP]: 1588 poses in ORB => length of 75.11 meters
+./eval_err.sh: line 27: 1129441 Segmentation fault      (core dumped) rosrun ov_eval plot_trajectories posyaw ${SCRIPT_DIR}/../../../ov_data/euroc_mav/V1_02_medium.txt ${SCRIPT_DIR}/exp_euroc/algorithms/Mono-KLT/V1_02_medium/KLT.txt ${SCRIPT_DIR}/exp_euroc/algorithms/Mono-NN/V1_02_medium/NN.txt ${SCRIPT_DIR}/exp_euroc/algorithms/Mono-ORB/V1_02_medium/ORB.txt
 Setting printing level to: INFO
 [COMP]: 16702 poses in V1_02_medium => length of 75.89 meters
 ======================================
@@ -107,18 +107,18 @@ Setting printing level to: INFO
         NEES: mean_ori = 97.948 | mean_pos = 3.752
 ======================================
 [COMP]: processing Mono-ORB algorithm
-        ATE: mean_ori = 1.790 | mean_pos = 0.133 (1 runs)
+        ATE: mean_ori = 1.802 | mean_pos = 0.136 (1 runs)
         ATE: std_ori  = -nan | std_pos  = -nan
-        ATE 2D: mean_ori = 1.743 | mean_pos = 0.131 (1 runs)
+        ATE 2D: mean_ori = 1.755 | mean_pos = 0.134 (1 runs)
         ATE 2D: std_ori  = -nan | std_pos  = -nan
-        RPE: seg 7 - mean_ori = 0.760 | mean_pos = 0.148 (1372 samples)
-        RPE: seg 14 - mean_ori = 1.241 | mean_pos = 0.178 (1265 samples)
-        RPE: seg 21 - mean_ori = 1.517 | mean_pos = 0.165 (1118 samples)
-        RPE: seg 28 - mean_ori = 1.709 | mean_pos = 0.178 (970 samples)
-        RPE: seg 35 - mean_ori = 1.946 | mean_pos = 0.203 (826 samples)
-        RMSE: mean_ori = 1.570 | mean_pos = 0.118
-        RMSE 2D: mean_ori = 1.487 | mean_pos = 0.115
-        NEES: mean_ori = 86.613 | mean_pos = 4.623
+        RPE: seg 7 - mean_ori = 0.781 | mean_pos = 0.151 (1372 samples)
+        RPE: seg 14 - mean_ori = 1.265 | mean_pos = 0.180 (1265 samples)
+        RPE: seg 21 - mean_ori = 1.544 | mean_pos = 0.169 (1118 samples)
+        RPE: seg 28 - mean_ori = 1.723 | mean_pos = 0.182 (970 samples)
+        RPE: seg 35 - mean_ori = 1.956 | mean_pos = 0.208 (826 samples)
+        RMSE: mean_ori = 1.574 | mean_pos = 0.121
+        RMSE 2D: mean_ori = 1.487 | mean_pos = 0.118
+        NEES: mean_ori = 87.138 | mean_pos = 4.843
 
 
 ============================================
@@ -127,7 +127,7 @@ ATE AND NEES LATEX TABLE
  & \textbf{ATE (deg/m)} & \textbf{NEES (deg/m)} \\\hline
 Mono-KLT & 1.652 / 0.065 & 123.697 / 1.403 \\
 Mono-NN & 1.858 / 0.113 & 97.948 / 3.752 \\
-Mono-ORB & 1.790 / 0.133 & 86.613 / 4.623 \\
+Mono-ORB & 1.802 / 0.136 & 87.138 / 4.843 \\
 ============================================
 ============================================
 RPE LATEX TABLE
@@ -135,17 +135,17 @@ RPE LATEX TABLE
  & \textbf{7m} & \textbf{14m} & \textbf{21m} & \textbf{28m} & \textbf{35m} \\\hline
 Mono-KLT & 0.458 / 0.106 & 0.611 / 0.109 & 0.695 / 0.099 & 0.792 / 0.123 & 0.878 / 0.124 \\
 Mono-NN & 0.655 / 0.144 & 1.007 / 0.155 & 1.274 / 0.144 & 1.573 / 0.164 & 1.949 / 0.182 \\
-Mono-ORB & 0.760 / 0.148 & 1.241 / 0.178 & 1.517 / 0.165 & 1.709 / 0.178 & 1.946 / 0.203 \\
+Mono-ORB & 0.781 / 0.151 & 1.265 / 0.180 & 1.544 / 0.169 & 1.723 / 0.182 & 1.956 / 0.208 \\
 ============================================
 
 ---------------------------------------------------------------------------------
-./eval_err.sh: line 31: 23186 Segmentation fault      (core dumped) rosrun ov_eval error_dataset posyaw ${SCRIPT_DIR}/../../../ov_data/euroc_mav/V1_02_medium.txt ${SCRIPT_DIR}/exp_euroc/algorithms/
+./eval_err.sh: line 31: 1129499 Segmentation fault      (core dumped) rosrun ov_eval error_dataset posyaw ${SCRIPT_DIR}/../../../ov_data/euroc_mav/V1_02_medium.txt ${SCRIPT_DIR}/exp_euroc/algorithms/
 Setting printing level to: INFO
 [COMP]: 20932 poses in V1_03_difficult => length of 78.98 meters
 [COMP]: 1979 poses in KLT => length of 76.92 meters
 [COMP]: 1982 poses in NN => length of 78.03 meters
-[COMP]: 1983 poses in ORB => length of 78.49 meters
-./eval_err.sh: line 39: 23235 Segmentation fault      (core dumped) rosrun ov_eval plot_trajectories posyaw ${SCRIPT_DIR}/../../../ov_data/euroc_mav/V1_03_difficult.txt ${SCRIPT_DIR}/exp_euroc/algorithms/Mono-KLT/V1_03_difficult/KLT.txt ${SCRIPT_DIR}/exp_euroc/algorithms/Mono-NN/V1_03_difficult/NN.txt ${SCRIPT_DIR}/exp_euroc/algorithms/Mono-ORB/V1_03_difficult/ORB.txt
+[COMP]: 1950 poses in ORB => length of 77.42 meters
+./eval_err.sh: line 39: 1129558 Segmentation fault      (core dumped) rosrun ov_eval plot_trajectories posyaw ${SCRIPT_DIR}/../../../ov_data/euroc_mav/V1_03_difficult.txt ${SCRIPT_DIR}/exp_euroc/algorithms/Mono-KLT/V1_03_difficult/KLT.txt ${SCRIPT_DIR}/exp_euroc/algorithms/Mono-NN/V1_03_difficult/NN.txt ${SCRIPT_DIR}/exp_euroc/algorithms/Mono-ORB/V1_03_difficult/ORB.txt
 Setting printing level to: INFO
 [COMP]: 20932 poses in V1_03_difficult => length of 78.98 meters
 ======================================
@@ -178,18 +178,18 @@ Setting printing level to: INFO
         NEES: mean_ori = 179.943 | mean_pos = 4.520
 ======================================
 [COMP]: processing Mono-ORB algorithm
-        ATE: mean_ori = 3.737 | mean_pos = 0.126 (1 runs)
+        ATE: mean_ori = 3.724 | mean_pos = 0.137 (1 runs)
         ATE: std_ori  = -nan | std_pos  = -nan
-        ATE 2D: mean_ori = 3.685 | mean_pos = 0.106 (1 runs)
+        ATE 2D: mean_ori = 3.598 | mean_pos = 0.107 (1 runs)
         ATE 2D: std_ori  = -nan | std_pos  = -nan
-        RPE: seg 7 - mean_ori = 1.478 | mean_pos = 0.114 (1752 samples)
-        RPE: seg 14 - mean_ori = 2.369 | mean_pos = 0.132 (1583 samples)
-        RPE: seg 21 - mean_ori = 2.847 | mean_pos = 0.146 (1385 samples)
-        RPE: seg 28 - mean_ori = 3.053 | mean_pos = 0.146 (1229 samples)
-        RPE: seg 35 - mean_ori = 3.265 | mean_pos = 0.166 (1061 samples)
-        RMSE: mean_ori = 3.487 | mean_pos = 0.116
-        RMSE 2D: mean_ori = 3.383 | mean_pos = 0.096
-        NEES: mean_ori = 151.033 | mean_pos = 3.587
+        RPE: seg 7 - mean_ori = 1.469 | mean_pos = 0.130 (1719 samples)
+        RPE: seg 14 - mean_ori = 2.133 | mean_pos = 0.159 (1550 samples)
+        RPE: seg 21 - mean_ori = 2.643 | mean_pos = 0.183 (1352 samples)
+        RPE: seg 28 - mean_ori = 2.848 | mean_pos = 0.187 (1196 samples)
+        RPE: seg 35 - mean_ori = 3.119 | mean_pos = 0.195 (1028 samples)
+        RMSE: mean_ori = 3.473 | mean_pos = 0.121
+        RMSE 2D: mean_ori = 3.254 | mean_pos = 0.087
+        NEES: mean_ori = 148.901 | mean_pos = 6.630
 
 
 ============================================
@@ -198,7 +198,7 @@ ATE AND NEES LATEX TABLE
  & \textbf{ATE (deg/m)} & \textbf{NEES (deg/m)} \\\hline
 Mono-KLT & 2.694 / 0.090 & 241.976 / 2.878 \\
 Mono-NN & 2.229 / 0.130 & 179.943 / 4.520 \\
-Mono-ORB & 3.737 / 0.126 & 151.033 / 3.587 \\
+Mono-ORB & 3.724 / 0.137 & 148.901 / 6.630 \\
 ============================================
 ============================================
 RPE LATEX TABLE
@@ -206,16 +206,17 @@ RPE LATEX TABLE
  & \textbf{7m} & \textbf{14m} & \textbf{21m} & \textbf{28m} & \textbf{35m} \\\hline
 Mono-KLT & 0.804 / 0.114 & 1.056 / 0.134 & 1.231 / 0.151 & 1.136 / 0.149 & 0.992 / 0.151 \\
 Mono-NN & 1.046 / 0.108 & 1.343 / 0.133 & 1.593 / 0.156 & 1.583 / 0.183 & 1.486 / 0.215 \\
-Mono-ORB & 1.478 / 0.114 & 2.369 / 0.132 & 2.847 / 0.146 & 3.053 / 0.146 & 3.265 / 0.166 \\
+Mono-ORB & 1.469 / 0.130 & 2.133 / 0.159 & 2.643 / 0.183 & 2.848 / 0.187 & 3.119 / 0.195 \\
 ============================================
 
 ---------------------------------------------------------------------------------
-./eval_err.sh: line 43: 23280 Segmentation fault      (core dumped) rosrun ov_eval error_dataset posyaw ${SCRIPT_DIR}/../../../ov_data/euroc_mav/V1_03_difficult.txt ${SCRIPT_DIR}/exp_euroc/algorithms/
+./eval_err.sh: line 43: 1129604 Segmentation fault      (core dumped) rosrun ov_eval error_dataset posyaw ${SCRIPT_DIR}/../../../ov_data/euroc_mav/V1_03_difficult.txt ${SCRIPT_DIR}/exp_euroc/algorithms/
 Setting printing level to: INFO
 [COMP]: 22401 poses in V2_01_easy => length of 36.50 meters
 [COMP]: 2145 poses in KLT => length of 37.06 meters
 [COMP]: 2111 poses in NN => length of 37.08 meters
-./eval_err.sh: line 50: 23332 Segmentation fault      (core dumped) rosrun ov_eval plot_trajectories posyaw ${SCRIPT_DIR}/../../../ov_data/euroc_mav/V2_01_easy.txt ${SCRIPT_DIR}/exp_euroc/algorithms/Mono-KLT/V2_01_easy/KLT.txt ${SCRIPT_DIR}/exp_euroc/algorithms/Mono-NN/V2_01_easy/NN.txt
+[COMP]: 2116 poses in ORB => length of 37.25 meters
+./eval_err.sh: line 51: 1129661 Segmentation fault      (core dumped) rosrun ov_eval plot_trajectories posyaw ${SCRIPT_DIR}/../../../ov_data/euroc_mav/V2_01_easy.txt ${SCRIPT_DIR}/exp_euroc/algorithms/Mono-KLT/V2_01_easy/KLT.txt ${SCRIPT_DIR}/exp_euroc/algorithms/Mono-NN/V2_01_easy/NN.txt ${SCRIPT_DIR}/exp_euroc/algorithms/Mono-ORB/V2_01_easy/ORB.txt
 Setting printing level to: INFO
 [COMP]: 22401 poses in V2_01_easy => length of 36.50 meters
 ======================================
@@ -248,20 +249,18 @@ Setting printing level to: INFO
         NEES: mean_ori = 192.581 | mean_pos = 28.564
 ======================================
 [COMP]: processing Mono-ORB algorithm
-[TRAJ]: Trajectory is a bad ratio of 62.74 length (est 2289.88, gt 36.50)
-[TRAJ]: /home/ryan/Developer/catkin_ov/src/open_vins/ov_msckf/scripts/runs_oct4_23/exp_euroc/algorithms/Mono-ORB/V2_01_easy/ORB.txt
-        ATE: mean_ori = 96.558 | mean_pos = 662.194 (1 runs)
+        ATE: mean_ori = 1.367 | mean_pos = 0.130 (1 runs)
         ATE: std_ori  = -nan | std_pos  = -nan
-        ATE 2D: mean_ori = 96.522 | mean_pos = 661.099 (1 runs)
+        ATE 2D: mean_ori = 1.065 | mean_pos = 0.115 (1 runs)
         ATE 2D: std_ori  = -nan | std_pos  = -nan
-        RPE: seg 7 - mean_ori = 4.173 | mean_pos = 435.534 (1691 samples)
-        RPE: seg 14 - mean_ori = 8.129 | mean_pos = 889.480 (1274 samples)
-        RPE: seg 21 - mean_ori = 11.822 | mean_pos = 1307.465 (816 samples)
-        RPE: seg 28 - mean_ori = 15.391 | mean_pos = 1637.508 (385 samples)
-        RPE: seg 35 - mean_ori = 19.660 | mean_pos = 1997.832 (80 samples)
-        RMSE: mean_ori = 96.398 | mean_pos = 581.488
-        RMSE 2D: mean_ori = 96.363 | mean_pos = 580.609
-        NEES: mean_ori = 2102.720 | mean_pos = 22234458.064
+        RPE: seg 7 - mean_ori = 1.315 | mean_pos = 0.163 (1687 samples)
+        RPE: seg 14 - mean_ori = 1.931 | mean_pos = 0.205 (1270 samples)
+        RPE: seg 21 - mean_ori = 1.890 | mean_pos = 0.248 (812 samples)
+        RPE: seg 28 - mean_ori = 2.250 | mean_pos = 0.230 (381 samples)
+        RPE: seg 35 - mean_ori = 2.227 | mean_pos = 0.238 (76 samples)
+        RMSE: mean_ori = 1.149 | mean_pos = 0.115
+        RMSE 2D: mean_ori = 0.852 | mean_pos = 0.103
+        NEES: mean_ori = 179.911 | mean_pos = 11.388
 
 
 ============================================
@@ -270,7 +269,7 @@ ATE AND NEES LATEX TABLE
  & \textbf{ATE (deg/m)} & \textbf{NEES (deg/m)} \\\hline
 Mono-KLT & 0.854 / 0.110 & 342.485 / 4.468 \\
 Mono-NN & 1.420 / 0.139 & 192.581 / 28.564 \\
-Mono-ORB & 96.558 / 662.194 & 2102.720 / 22234458.064 \\
+Mono-ORB & 1.367 / 0.130 & 179.911 / 11.388 \\
 ============================================
 ============================================
 RPE LATEX TABLE
@@ -278,17 +277,17 @@ RPE LATEX TABLE
  & \textbf{7m} & \textbf{14m} & \textbf{21m} & \textbf{28m} & \textbf{35m} \\\hline
 Mono-KLT & 0.695 / 0.097 & 0.859 / 0.151 & 1.049 / 0.196 & 1.020 / 0.240 & 1.277 / 0.223 \\
 Mono-NN & 1.403 / 0.157 & 1.930 / 0.221 & 2.080 / 0.268 & 2.483 / 0.333 & 2.166 / 0.360 \\
-Mono-ORB & 4.173 / 435.534 & 8.129 / 889.480 & 11.822 / 1307.465 & 15.391 / 1637.508 & 19.660 / 1997.832 \\
+Mono-ORB & 1.315 / 0.163 & 1.931 / 0.205 & 1.890 / 0.248 & 2.250 / 0.230 & 2.227 / 0.238 \\
 ============================================
 
 ---------------------------------------------------------------------------------
-./eval_err.sh: line 55: 23387 Segmentation fault      (core dumped) rosrun ov_eval error_dataset posyaw ${SCRIPT_DIR}/../../../ov_data/euroc_mav/V2_01_easy.txt ${SCRIPT_DIR}/exp_euroc/algorithms/
+./eval_err.sh: line 55: 1129711 Segmentation fault      (core dumped) rosrun ov_eval error_dataset posyaw ${SCRIPT_DIR}/../../../ov_data/euroc_mav/V2_01_easy.txt ${SCRIPT_DIR}/exp_euroc/algorithms/
 Setting printing level to: INFO
 [COMP]: 23091 poses in V2_02_medium => length of 83.23 meters
 [COMP]: 2231 poses in KLT => length of 82.40 meters
 [COMP]: 2248 poses in NN => length of 83.01 meters
-[COMP]: 2236 poses in ORB => length of 82.89 meters
-./eval_err.sh: line 63: 23430 Segmentation fault      (core dumped) rosrun ov_eval plot_trajectories posyaw ${SCRIPT_DIR}/../../../ov_data/euroc_mav/V2_02_medium.txt ${SCRIPT_DIR}/exp_euroc/algorithms/Mono-KLT/V2_02_medium/KLT.txt ${SCRIPT_DIR}/exp_euroc/algorithms/Mono-NN/V2_02_medium/NN.txt ${SCRIPT_DIR}/exp_euroc/algorithms/Mono-ORB/V2_02_medium/ORB.txt
+[COMP]: 2251 poses in ORB => length of 83.20 meters
+./eval_err.sh: line 63: 1129770 Segmentation fault      (core dumped) rosrun ov_eval plot_trajectories posyaw ${SCRIPT_DIR}/../../../ov_data/euroc_mav/V2_02_medium.txt ${SCRIPT_DIR}/exp_euroc/algorithms/Mono-KLT/V2_02_medium/KLT.txt ${SCRIPT_DIR}/exp_euroc/algorithms/Mono-NN/V2_02_medium/NN.txt ${SCRIPT_DIR}/exp_euroc/algorithms/Mono-ORB/V2_02_medium/ORB.txt
 Setting printing level to: INFO
 [COMP]: 23091 poses in V2_02_medium => length of 83.23 meters
 ======================================
@@ -321,18 +320,18 @@ Setting printing level to: INFO
         NEES: mean_ori = 614.828 | mean_pos = 3.207
 ======================================
 [COMP]: processing Mono-ORB algorithm
-        ATE: mean_ori = 1.890 | mean_pos = 0.165 (1 runs)
+        ATE: mean_ori = 1.982 | mean_pos = 0.167 (1 runs)
         ATE: std_ori  = -nan | std_pos  = -nan
-        ATE 2D: mean_ori = 1.686 | mean_pos = 0.126 (1 runs)
+        ATE 2D: mean_ori = 1.791 | mean_pos = 0.130 (1 runs)
         ATE 2D: std_ori  = -nan | std_pos  = -nan
-        RPE: seg 7 - mean_ori = 1.259 | mean_pos = 0.113 (1928 samples)
-        RPE: seg 14 - mean_ori = 1.581 | mean_pos = 0.152 (1799 samples)
-        RPE: seg 21 - mean_ori = 1.974 | mean_pos = 0.186 (1606 samples)
-        RPE: seg 28 - mean_ori = 2.234 | mean_pos = 0.226 (1439 samples)
-        RPE: seg 35 - mean_ori = 2.454 | mean_pos = 0.231 (1213 samples)
-        RMSE: mean_ori = 1.668 | mean_pos = 0.156
-        RMSE 2D: mean_ori = 1.408 | mean_pos = 0.116
-        NEES: mean_ori = 556.361 | mean_pos = 6.968
+        RPE: seg 7 - mean_ori = 1.287 | mean_pos = 0.113 (1943 samples)
+        RPE: seg 14 - mean_ori = 1.644 | mean_pos = 0.152 (1814 samples)
+        RPE: seg 21 - mean_ori = 2.047 | mean_pos = 0.186 (1621 samples)
+        RPE: seg 28 - mean_ori = 2.315 | mean_pos = 0.229 (1454 samples)
+        RPE: seg 35 - mean_ori = 2.520 | mean_pos = 0.235 (1228 samples)
+        RMSE: mean_ori = 1.732 | mean_pos = 0.158
+        RMSE 2D: mean_ori = 1.468 | mean_pos = 0.119
+        NEES: mean_ori = 552.313 | mean_pos = 7.072
 
 
 ============================================
@@ -341,7 +340,7 @@ ATE AND NEES LATEX TABLE
  & \textbf{ATE (deg/m)} & \textbf{NEES (deg/m)} \\\hline
 Mono-KLT & 1.417 / 0.060 & 948.418 / 1.166 \\
 Mono-NN & 1.548 / 0.105 & 614.828 / 3.207 \\
-Mono-ORB & 1.890 / 0.165 & 556.361 / 6.968 \\
+Mono-ORB & 1.982 / 0.167 & 552.313 / 7.072 \\
 ============================================
 ============================================
 RPE LATEX TABLE
@@ -349,17 +348,16 @@ RPE LATEX TABLE
  & \textbf{7m} & \textbf{14m} & \textbf{21m} & \textbf{28m} & \textbf{35m} \\\hline
 Mono-KLT & 1.134 / 0.057 & 1.210 / 0.071 & 1.412 / 0.082 & 1.627 / 0.089 & 1.784 / 0.078 \\
 Mono-NN & 1.189 / 0.090 & 1.336 / 0.102 & 1.623 / 0.121 & 1.834 / 0.164 & 1.920 / 0.149 \\
-Mono-ORB & 1.259 / 0.113 & 1.581 / 0.152 & 1.974 / 0.186 & 2.234 / 0.226 & 2.454 / 0.231 \\
+Mono-ORB & 1.287 / 0.113 & 1.644 / 0.152 & 2.047 / 0.186 & 2.315 / 0.229 & 2.520 / 0.235 \\
 ============================================
 
 ---------------------------------------------------------------------------------
-./eval_err.sh: line 67: 23481 Segmentation fault      (core dumped) rosrun ov_eval error_dataset posyaw ${SCRIPT_DIR}/../../../ov_data/euroc_mav/V2_02_medium.txt ${SCRIPT_DIR}/exp_euroc/algorithms/
+./eval_err.sh: line 67: 1129817 Segmentation fault      (core dumped) rosrun ov_eval error_dataset posyaw ${SCRIPT_DIR}/../../../ov_data/euroc_mav/V2_02_medium.txt ${SCRIPT_DIR}/exp_euroc/algorithms/
 Setting printing level to: INFO
 [COMP]: 22970 poses in V2_03_difficult => length of 86.13 meters
 [COMP]: 1786 poses in KLT => length of 86.59 meters
 [COMP]: 1735 poses in NN => length of 86.28 meters
-[COMP]: 1797 poses in ORB => length of 88.69 meters
-./eval_err.sh: line 75: 23524 Segmentation fault      (core dumped) rosrun ov_eval plot_trajectories posyaw ${SCRIPT_DIR}/../../../ov_data/euroc_mav/V2_03_difficult.txt ${SCRIPT_DIR}/exp_euroc/algorithms/Mono-KLT/V2_03_difficult/KLT.txt ${SCRIPT_DIR}/exp_euroc/algorithms/Mono-NN/V2_03_difficult/NN.txt ${SCRIPT_DIR}/exp_euroc/algorithms/Mono-ORB/V2_03_difficult/ORB.txt
+./eval_err.sh: line 74: 1129878 Segmentation fault      (core dumped) rosrun ov_eval plot_trajectories posyaw ${SCRIPT_DIR}/../../../ov_data/euroc_mav/V2_03_difficult.txt ${SCRIPT_DIR}/exp_euroc/algorithms/Mono-KLT/V2_03_difficult/KLT.txt ${SCRIPT_DIR}/exp_euroc/algorithms/Mono-NN/V2_03_difficult/NN.txt
 Setting printing level to: INFO
 [COMP]: 22970 poses in V2_03_difficult => length of 86.13 meters
 ======================================
@@ -392,18 +390,19 @@ Setting printing level to: INFO
         NEES: mean_ori = 582.365 | mean_pos = 8.129
 ======================================
 [COMP]: processing Mono-ORB algorithm
-        ATE: mean_ori = 1.774 | mean_pos = 0.314 (1 runs)
+[TRAJ]: Trajectory is a bad ratio of 330.04 length (est 28425.60, gt 86.13)
+        ATE: mean_ori = 106.985 | mean_pos = 7571.789 (1 runs)
         ATE: std_ori  = -nan | std_pos  = -nan
-        ATE 2D: mean_ori = 1.535 | mean_pos = 0.293 (1 runs)
+        ATE 2D: mean_ori = 89.524 | mean_pos = 6726.958 (1 runs)
         ATE 2D: std_ori  = -nan | std_pos  = -nan
-        RPE: seg 7 - mean_ori = 1.060 | mean_pos = 0.192 (1647 samples)
-        RPE: seg 14 - mean_ori = 1.381 | mean_pos = 0.257 (1537 samples)
-        RPE: seg 21 - mean_ori = 1.488 | mean_pos = 0.327 (1403 samples)
-        RPE: seg 28 - mean_ori = 1.761 | mean_pos = 0.359 (1155 samples)
-        RPE: seg 35 - mean_ori = 1.970 | mean_pos = 0.417 (1048 samples)
-        RMSE: mean_ori = 1.604 | mean_pos = 0.289
-        RMSE 2D: mean_ori = 1.216 | mean_pos = 0.269
-        NEES: mean_ori = 520.330 | mean_pos = 13.345
+        RPE: seg 7 - mean_ori = 22.306 | mean_pos = 2153.305 (1598 samples)
+        RPE: seg 14 - mean_ori = 29.881 | mean_pos = 4168.918 (1488 samples)
+        RPE: seg 21 - mean_ori = 36.896 | mean_pos = 6247.627 (1354 samples)
+        RPE: seg 28 - mean_ori = 45.608 | mean_pos = 7426.000 (1106 samples)
+        RPE: seg 35 - mean_ori = 55.165 | mean_pos = 9165.468 (999 samples)
+        RMSE: mean_ori = 102.407 | mean_pos = 6418.884
+        RMSE 2D: mean_ori = 86.311 | mean_pos = 5710.946
+        NEES: mean_ori = 52294.776 | mean_pos = 369906445.297
 
 
 ============================================
@@ -412,7 +411,7 @@ ATE AND NEES LATEX TABLE
  & \textbf{ATE (deg/m)} & \textbf{NEES (deg/m)} \\\hline
 Mono-KLT & 1.103 / 0.180 & 731.748 / 9.642 \\
 Mono-NN & 1.757 / 0.215 & 582.365 / 8.129 \\
-Mono-ORB & 1.774 / 0.314 & 520.330 / 13.345 \\
+Mono-ORB & 106.985 / 7571.789 & 52294.776 / 369906445.297 \\
 ============================================
 ============================================
 RPE LATEX TABLE
@@ -420,16 +419,17 @@ RPE LATEX TABLE
  & \textbf{7m} & \textbf{14m} & \textbf{21m} & \textbf{28m} & \textbf{35m} \\\hline
 Mono-KLT & 0.781 / 0.101 & 0.961 / 0.170 & 0.943 / 0.196 & 1.011 / 0.228 & 1.229 / 0.234 \\
 Mono-NN & 1.491 / 0.144 & 1.786 / 0.235 & 1.615 / 0.297 & 1.620 / 0.326 & 1.511 / 0.332 \\
-Mono-ORB & 1.060 / 0.192 & 1.381 / 0.257 & 1.488 / 0.327 & 1.761 / 0.359 & 1.970 / 0.417 \\
+Mono-ORB & 22.306 / 2153.305 & 29.881 / 4168.918 & 36.896 / 6247.627 & 45.608 / 7426.000 & 55.165 / 9165.468 \\
 ============================================
 
 ---------------------------------------------------------------------------------
-./eval_err.sh: line 79: 23568 Segmentation fault      (core dumped) rosrun ov_eval error_dataset posyaw ${SCRIPT_DIR}/../../../ov_data/euroc_mav/V2_03_difficult.txt ${SCRIPT_DIR}/exp_euroc/algorithms/
+./eval_err.sh: line 79: 1129941 Segmentation fault      (core dumped) rosrun ov_eval error_dataset posyaw ${SCRIPT_DIR}/../../../ov_data/euroc_mav/V2_03_difficult.txt ${SCRIPT_DIR}/exp_euroc/algorithms/
 Setting printing level to: INFO
 [COMP]: 36382 poses in MH_01_easy => length of 80.63 meters
 [COMP]: 3603 poses in KLT => length of 79.86 meters
 [COMP]: 3615 poses in NN => length of 82.28 meters
-./eval_err.sh: line 86: 23611 Segmentation fault      (core dumped) rosrun ov_eval plot_trajectories posyaw ${SCRIPT_DIR}/../../../ov_data/euroc_mav/MH_01_easy.txt ${SCRIPT_DIR}/exp_euroc/algorithms/Mono-KLT/MH_01_easy/KLT.txt ${SCRIPT_DIR}/exp_euroc/algorithms/Mono-NN/MH_01_easy/NN.txt
+[COMP]: 3613 poses in ORB => length of 81.30 meters
+./eval_err.sh: line 87: 1130003 Segmentation fault      (core dumped) rosrun ov_eval plot_trajectories posyaw ${SCRIPT_DIR}/../../../ov_data/euroc_mav/MH_01_easy.txt ${SCRIPT_DIR}/exp_euroc/algorithms/Mono-KLT/MH_01_easy/KLT.txt ${SCRIPT_DIR}/exp_euroc/algorithms/Mono-NN/MH_01_easy/NN.txt ${SCRIPT_DIR}/exp_euroc/algorithms/Mono-ORB/MH_01_easy/ORB.txt
 Setting printing level to: INFO
 [COMP]: 36382 poses in MH_01_easy => length of 80.63 meters
 ======================================
@@ -462,20 +462,18 @@ Setting printing level to: INFO
         NEES: mean_ori = 109.638 | mean_pos = 2378.284
 ======================================
 [COMP]: processing Mono-ORB algorithm
-[TRAJ]: Trajectory is a bad ratio of 1363.19 length (est 109908.49, gt 80.63)
-[TRAJ]: /home/ryan/Developer/catkin_ov/src/open_vins/ov_msckf/scripts/runs_oct4_23/exp_euroc/algorithms/Mono-ORB/MH_01_easy/ORB.txt
-        ATE: mean_ori = 78.786 | mean_pos = 31286.046 (1 runs)
+        ATE: mean_ori = 4.029 | mean_pos = 0.472 (1 runs)
         ATE: std_ori  = -nan | std_pos  = -nan
-        ATE 2D: mean_ori = 35.926 | mean_pos = 28386.382 (1 runs)
+        ATE 2D: mean_ori = 3.957 | mean_pos = 0.340 (1 runs)
         ATE 2D: std_ori  = -nan | std_pos  = -nan
-        RPE: seg 7 - mean_ori = 13.547 | mean_pos = 8743.083 (3271 samples)
-        RPE: seg 14 - mean_ori = 21.317 | mean_pos = 15398.359 (2923 samples)
-        RPE: seg 21 - mean_ori = 25.577 | mean_pos = 21220.643 (2615 samples)
-        RPE: seg 28 - mean_ori = 29.631 | mean_pos = 28881.352 (2440 samples)
-        RPE: seg 35 - mean_ori = 34.604 | mean_pos = 33422.551 (2112 samples)
-        RMSE: mean_ori = 74.877 | mean_pos = 26493.179
-        RMSE 2D: mean_ori = 35.738 | mean_pos = 24108.251
-        NEES: mean_ori = 3975.666 | mean_pos = 5334097744.428
+        RPE: seg 7 - mean_ori = 1.104 | mean_pos = 0.496 (3289 samples)
+        RPE: seg 14 - mean_ori = 1.592 | mean_pos = 0.585 (2942 samples)
+        RPE: seg 21 - mean_ori = 2.052 | mean_pos = 0.653 (2634 samples)
+        RPE: seg 28 - mean_ori = 2.335 | mean_pos = 0.686 (2459 samples)
+        RPE: seg 35 - mean_ori = 2.652 | mean_pos = 0.758 (2131 samples)
+        RMSE: mean_ori = 3.713 | mean_pos = 0.416
+        RMSE 2D: mean_ori = 3.660 | mean_pos = 0.290
+        NEES: mean_ori = 55.531 | mean_pos = 131.802
 
 
 ============================================
@@ -484,7 +482,7 @@ ATE AND NEES LATEX TABLE
  & \textbf{ATE (deg/m)} & \textbf{NEES (deg/m)} \\\hline
 Mono-KLT & 1.563 / 0.140 & 74.445 / 909.151 \\
 Mono-NN & 4.484 / 0.721 & 109.638 / 2378.284 \\
-Mono-ORB & 78.786 / 31286.046 & 3975.666 / 5334097744.428 \\
+Mono-ORB & 4.029 / 0.472 & 55.531 / 131.802 \\
 ============================================
 ============================================
 RPE LATEX TABLE
@@ -492,16 +490,17 @@ RPE LATEX TABLE
  & \textbf{7m} & \textbf{14m} & \textbf{21m} & \textbf{28m} & \textbf{35m} \\\hline
 Mono-KLT & 0.685 / 0.104 & 1.073 / 0.157 & 1.298 / 0.169 & 1.426 / 0.173 & 1.594 / 0.186 \\
 Mono-NN & 1.053 / 0.677 & 1.271 / 0.725 & 1.414 / 0.802 & 1.314 / 0.861 & 1.550 / 0.931 \\
-Mono-ORB & 13.547 / 8743.083 & 21.317 / 15398.359 & 25.577 / 21220.643 & 29.631 / 28881.352 & 34.604 / 33422.551 \\
+Mono-ORB & 1.104 / 0.496 & 1.592 / 0.585 & 2.052 / 0.653 & 2.335 / 0.686 & 2.652 / 0.758 \\
 ============================================
 
 ---------------------------------------------------------------------------------
-./eval_err.sh: line 91: 23667 Segmentation fault      (core dumped) rosrun ov_eval error_dataset posyaw ${SCRIPT_DIR}/../../../ov_data/euroc_mav/MH_01_easy.txt ${SCRIPT_DIR}/exp_euroc/algorithms/
+./eval_err.sh: line 91: 1130051 Segmentation fault      (core dumped) rosrun ov_eval error_dataset posyaw ${SCRIPT_DIR}/../../../ov_data/euroc_mav/MH_01_easy.txt ${SCRIPT_DIR}/exp_euroc/algorithms/
 Setting printing level to: INFO
 [COMP]: 29993 poses in MH_02_easy => length of 73.47 meters
 [COMP]: 2953 poses in KLT => length of 72.73 meters
 [COMP]: 2973 poses in NN => length of 76.90 meters
-./eval_err.sh: line 98: 23710 Segmentation fault      (core dumped) rosrun ov_eval plot_trajectories posyaw ${SCRIPT_DIR}/../../../ov_data/euroc_mav/MH_02_easy.txt ${SCRIPT_DIR}/exp_euroc/algorithms/Mono-KLT/MH_02_easy/KLT.txt ${SCRIPT_DIR}/exp_euroc/algorithms/Mono-NN/MH_02_easy/NN.txt
+[COMP]: 2973 poses in ORB => length of 76.18 meters
+./eval_err.sh: line 99: 1130108 Segmentation fault      (core dumped) rosrun ov_eval plot_trajectories posyaw ${SCRIPT_DIR}/../../../ov_data/euroc_mav/MH_02_easy.txt ${SCRIPT_DIR}/exp_euroc/algorithms/Mono-KLT/MH_02_easy/KLT.txt ${SCRIPT_DIR}/exp_euroc/algorithms/Mono-NN/MH_02_easy/NN.txt ${SCRIPT_DIR}/exp_euroc/algorithms/Mono-ORB/MH_02_easy/ORB.txt
 Setting printing level to: INFO
 [COMP]: 29993 poses in MH_02_easy => length of 73.47 meters
 ======================================
@@ -534,20 +533,18 @@ Setting printing level to: INFO
         NEES: mean_ori = 101.710 | mean_pos = 14785.625
 ======================================
 [COMP]: processing Mono-ORB algorithm
-[TRAJ]: Trajectory is a bad ratio of 1400.17 length (est 102874.53, gt 73.47)
-[TRAJ]: /home/ryan/Developer/catkin_ov/src/open_vins/ov_msckf/scripts/runs_oct4_23/exp_euroc/algorithms/Mono-ORB/MH_02_easy/ORB.txt
-        ATE: mean_ori = 133.295 | mean_pos = 29298.232 (1 runs)
+        ATE: mean_ori = 5.049 | mean_pos = 0.650 (1 runs)
         ATE: std_ori  = -nan | std_pos  = -nan
-        ATE 2D: mean_ori = 79.652 | mean_pos = 6413.371 (1 runs)
+        ATE 2D: mean_ori = 5.027 | mean_pos = 0.648 (1 runs)
         ATE 2D: std_ori  = -nan | std_pos  = -nan
-        RPE: seg 7 - mean_ori = 100.357 | mean_pos = 8885.475 (2700 samples)
-        RPE: seg 14 - mean_ori = 132.250 | mean_pos = 17740.877 (2526 samples)
-        RPE: seg 21 - mean_ori = 140.528 | mean_pos = 27223.998 (2348 samples)
-        RPE: seg 28 - mean_ori = 161.756 | mean_pos = 36427.554 (2095 samples)
-        RPE: seg 35 - mean_ori = 135.526 | mean_pos = 46470.877 (1859 samples)
-        RMSE: mean_ori = 128.985 | mean_pos = 25386.648
-        RMSE 2D: mean_ori = 65.646 | mean_pos = 5663.447
-        NEES: mean_ori = 3111.284 | mean_pos = 1363640990.789
+        RPE: seg 7 - mean_ori = 0.864 | mean_pos = 0.549 (2707 samples)
+        RPE: seg 14 - mean_ori = 1.352 | mean_pos = 0.730 (2533 samples)
+        RPE: seg 21 - mean_ori = 1.640 | mean_pos = 0.839 (2355 samples)
+        RPE: seg 28 - mean_ori = 1.823 | mean_pos = 0.886 (2102 samples)
+        RPE: seg 35 - mean_ori = 2.055 | mean_pos = 1.016 (1866 samples)
+        RMSE: mean_ori = 4.796 | mean_pos = 0.575
+        RMSE 2D: mean_ori = 4.777 | mean_pos = 0.571
+        NEES: mean_ori = 103.830 | mean_pos = 1391.129
 
 
 ============================================
@@ -556,7 +553,7 @@ ATE AND NEES LATEX TABLE
  & \textbf{ATE (deg/m)} & \textbf{NEES (deg/m)} \\\hline
 Mono-KLT & 0.993 / 0.124 & 75.575 / 1085.944 \\
 Mono-NN & 3.971 / 1.215 & 101.710 / 14785.625 \\
-Mono-ORB & 133.295 / 29298.232 & 3111.284 / 1363640990.789 \\
+Mono-ORB & 5.049 / 0.650 & 103.830 / 1391.129 \\
 ============================================
 ============================================
 RPE LATEX TABLE
@@ -564,17 +561,17 @@ RPE LATEX TABLE
  & \textbf{7m} & \textbf{14m} & \textbf{21m} & \textbf{28m} & \textbf{35m} \\\hline
 Mono-KLT & 0.475 / 0.079 & 0.714 / 0.115 & 0.909 / 0.152 & 0.957 / 0.170 & 1.053 / 0.203 \\
 Mono-NN & 0.831 / 0.800 & 1.371 / 1.024 & 1.662 / 1.147 & 1.734 / 1.246 & 1.496 / 1.375 \\
-Mono-ORB & 100.357 / 8885.475 & 132.250 / 17740.877 & 140.528 / 27223.998 & 161.756 / 36427.554 & 135.526 / 46470.877 \\
+Mono-ORB & 0.864 / 0.549 & 1.352 / 0.730 & 1.640 / 0.839 & 1.823 / 0.886 & 2.055 / 1.016 \\
 ============================================
 
 ---------------------------------------------------------------------------------
-./eval_err.sh: line 103: 23765 Segmentation fault      (core dumped) rosrun ov_eval error_dataset posyaw ${SCRIPT_DIR}/../../../ov_data/euroc_mav/MH_02_easy.txt ${SCRIPT_DIR}/exp_euroc/algorithms/
+./eval_err.sh: line 103: 1130156 Segmentation fault      (core dumped) rosrun ov_eval error_dataset posyaw ${SCRIPT_DIR}/../../../ov_data/euroc_mav/MH_02_easy.txt ${SCRIPT_DIR}/exp_euroc/algorithms/
 Setting printing level to: INFO
 [COMP]: 26302 poses in MH_03_medium => length of 130.93 meters
 [COMP]: 2580 poses in KLT => length of 131.54 meters
 [COMP]: 2598 poses in NN => length of 132.26 meters
-[COMP]: 2594 poses in ORB => length of 132.06 meters
-./eval_err.sh: line 111: 23814 Segmentation fault      (core dumped) rosrun ov_eval plot_trajectories posyaw ${SCRIPT_DIR}/../../../ov_data/euroc_mav/MH_03_medium.txt ${SCRIPT_DIR}/exp_euroc/algorithms/Mono-KLT/MH_03_medium/KLT.txt ${SCRIPT_DIR}/exp_euroc/algorithms/Mono-NN/MH_03_medium/NN.txt ${SCRIPT_DIR}/exp_euroc/algorithms/Mono-ORB/MH_03_medium/ORB.txt
+[COMP]: 2598 poses in ORB => length of 132.18 meters
+./eval_err.sh: line 111: 1130211 Segmentation fault      (core dumped) rosrun ov_eval plot_trajectories posyaw ${SCRIPT_DIR}/../../../ov_data/euroc_mav/MH_03_medium.txt ${SCRIPT_DIR}/exp_euroc/algorithms/Mono-KLT/MH_03_medium/KLT.txt ${SCRIPT_DIR}/exp_euroc/algorithms/Mono-NN/MH_03_medium/NN.txt ${SCRIPT_DIR}/exp_euroc/algorithms/Mono-ORB/MH_03_medium/ORB.txt
 Setting printing level to: INFO
 [COMP]: 26302 poses in MH_03_medium => length of 130.93 meters
 ======================================
@@ -607,18 +604,18 @@ Setting printing level to: INFO
         NEES: mean_ori = 21.711 | mean_pos = 43.842
 ======================================
 [COMP]: processing Mono-ORB algorithm
-        ATE: mean_ori = 0.852 | mean_pos = 0.324 (1 runs)
+        ATE: mean_ori = 0.797 | mean_pos = 0.326 (1 runs)
         ATE: std_ori  = -nan | std_pos  = -nan
-        ATE 2D: mean_ori = 0.729 | mean_pos = 0.314 (1 runs)
+        ATE 2D: mean_ori = 0.691 | mean_pos = 0.318 (1 runs)
         ATE 2D: std_ori  = -nan | std_pos  = -nan
-        RPE: seg 7 - mean_ori = 0.561 | mean_pos = 0.204 (2306 samples)
-        RPE: seg 14 - mean_ori = 0.691 | mean_pos = 0.235 (2190 samples)
-        RPE: seg 21 - mean_ori = 0.844 | mean_pos = 0.277 (2104 samples)
-        RPE: seg 28 - mean_ori = 0.940 | mean_pos = 0.326 (2040 samples)
-        RPE: seg 35 - mean_ori = 1.016 | mean_pos = 0.362 (1967 samples)
-        RMSE: mean_ori = 0.770 | mean_pos = 0.293
-        RMSE 2D: mean_ori = 0.613 | mean_pos = 0.284
-        NEES: mean_ori = 21.854 | mean_pos = 17.472
+        RPE: seg 7 - mean_ori = 0.572 | mean_pos = 0.214 (2310 samples)
+        RPE: seg 14 - mean_ori = 0.701 | mean_pos = 0.230 (2194 samples)
+        RPE: seg 21 - mean_ori = 0.815 | mean_pos = 0.274 (2108 samples)
+        RPE: seg 28 - mean_ori = 0.895 | mean_pos = 0.324 (2044 samples)
+        RPE: seg 35 - mean_ori = 1.021 | mean_pos = 0.356 (1971 samples)
+        RMSE: mean_ori = 0.726 | mean_pos = 0.294
+        RMSE 2D: mean_ori = 0.578 | mean_pos = 0.287
+        NEES: mean_ori = 18.821 | mean_pos = 18.497
 
 
 ============================================
@@ -627,7 +624,7 @@ ATE AND NEES LATEX TABLE
  & \textbf{ATE (deg/m)} & \textbf{NEES (deg/m)} \\\hline
 Mono-KLT & 1.337 / 0.148 & 35.465 / 5.937 \\
 Mono-NN & 0.894 / 0.456 & 21.711 / 43.842 \\
-Mono-ORB & 0.852 / 0.324 & 21.854 / 17.472 \\
+Mono-ORB & 0.797 / 0.326 & 18.821 / 18.497 \\
 ============================================
 ============================================
 RPE LATEX TABLE
@@ -635,16 +632,16 @@ RPE LATEX TABLE
  & \textbf{7m} & \textbf{14m} & \textbf{21m} & \textbf{28m} & \textbf{35m} \\\hline
 Mono-KLT & 0.357 / 0.130 & 0.547 / 0.151 & 0.654 / 0.137 & 0.784 / 0.157 & 0.978 / 0.198 \\
 Mono-NN & 0.483 / 0.239 & 0.571 / 0.255 & 0.759 / 0.310 & 0.807 / 0.384 & 0.943 / 0.436 \\
-Mono-ORB & 0.561 / 0.204 & 0.691 / 0.235 & 0.844 / 0.277 & 0.940 / 0.326 & 1.016 / 0.362 \\
+Mono-ORB & 0.572 / 0.214 & 0.701 / 0.230 & 0.815 / 0.274 & 0.895 / 0.324 & 1.021 / 0.356 \\
 ============================================
 
 ---------------------------------------------------------------------------------
-./eval_err.sh: line 115: 23858 Segmentation fault      (core dumped) rosrun ov_eval error_dataset posyaw ${SCRIPT_DIR}/../../../ov_data/euroc_mav/MH_03_medium.txt ${SCRIPT_DIR}/exp_euroc/algorithms/
+./eval_err.sh: line 115: 1130274 Segmentation fault      (core dumped) rosrun ov_eval error_dataset posyaw ${SCRIPT_DIR}/../../../ov_data/euroc_mav/MH_03_medium.txt ${SCRIPT_DIR}/exp_euroc/algorithms/
 Setting printing level to: INFO
 [COMP]: 19753 poses in MH_04_difficult => length of 91.75 meters
 [COMP]: 1942 poses in KLT => length of 92.50 meters
 [COMP]: 1890 poses in NN => length of 94.53 meters
-./eval_err.sh: line 122: 23901 Segmentation fault      (core dumped) rosrun ov_eval plot_trajectories posyaw ${SCRIPT_DIR}/../../../ov_data/euroc_mav/MH_04_difficult.txt ${SCRIPT_DIR}/exp_euroc/algorithms/Mono-KLT/MH_04_difficult/KLT.txt ${SCRIPT_DIR}/exp_euroc/algorithms/Mono-NN/MH_04_difficult/NN.txt
+./eval_err.sh: line 122: 1130345 Segmentation fault      (core dumped) rosrun ov_eval plot_trajectories posyaw ${SCRIPT_DIR}/../../../ov_data/euroc_mav/MH_04_difficult.txt ${SCRIPT_DIR}/exp_euroc/algorithms/Mono-KLT/MH_04_difficult/KLT.txt ${SCRIPT_DIR}/exp_euroc/algorithms/Mono-NN/MH_04_difficult/NN.txt
 Setting printing level to: INFO
 [COMP]: 19753 poses in MH_04_difficult => length of 91.75 meters
 ======================================
@@ -677,20 +674,19 @@ Setting printing level to: INFO
         NEES: mean_ori = 26.781 | mean_pos = 150.678
 ======================================
 [COMP]: processing Mono-ORB algorithm
-[TRAJ]: Trajectory is a bad ratio of 404.67 length (est 37127.63, gt 91.75)
-[TRAJ]: /home/ryan/Developer/catkin_ov/src/open_vins/ov_msckf/scripts/runs_oct4_23/exp_euroc/algorithms/Mono-ORB/MH_04_difficult/ORB.txt
-        ATE: mean_ori = 167.833 | mean_pos = 9869.023 (1 runs)
+[TRAJ]: Trajectory is a bad ratio of 13.22 length (est 1213.20, gt 91.75)
+        ATE: mean_ori = 18.569 | mean_pos = 235.726 (1 runs)
         ATE: std_ori  = -nan | std_pos  = -nan
-        ATE 2D: mean_ori = 128.830 | mean_pos = 8705.109 (1 runs)
+        ATE 2D: mean_ori = 18.181 | mean_pos = 235.520 (1 runs)
         ATE 2D: std_ori  = -nan | std_pos  = -nan
-        RPE: seg 7 - mean_ori = 15.383 | mean_pos = 1856.112 (1677 samples)
-        RPE: seg 14 - mean_ori = 24.306 | mean_pos = 3665.818 (1594 samples)
-        RPE: seg 21 - mean_ori = 33.224 | mean_pos = 5425.009 (1485 samples)
-        RPE: seg 28 - mean_ori = 39.722 | mean_pos = 7135.530 (1414 samples)
-        RPE: seg 35 - mean_ori = 46.585 | mean_pos = 9132.049 (1309 samples)
-        RMSE: mean_ori = 167.651 | mean_pos = 8398.420
-        RMSE 2D: mean_ori = 125.431 | mean_pos = 7425.180
-        NEES: mean_ori = 11465.348 | mean_pos = 105683372.243
+        RPE: seg 7 - mean_ori = 2.160 | mean_pos = 53.749 (1666 samples)
+        RPE: seg 14 - mean_ori = 3.973 | mean_pos = 101.843 (1583 samples)
+        RPE: seg 21 - mean_ori = 4.797 | mean_pos = 144.931 (1474 samples)
+        RPE: seg 28 - mean_ori = 4.959 | mean_pos = 187.199 (1403 samples)
+        RPE: seg 35 - mean_ori = 5.042 | mean_pos = 231.932 (1298 samples)
+        RMSE: mean_ori = 18.381 | mean_pos = 201.421
+        RMSE 2D: mean_ori = 17.937 | mean_pos = 201.157
+        NEES: mean_ori = 1039.846 | mean_pos = 708707.865
 
 
 ============================================
@@ -699,7 +695,7 @@ ATE AND NEES LATEX TABLE
  & \textbf{ATE (deg/m)} & \textbf{NEES (deg/m)} \\\hline
 Mono-KLT & 2.057 / 0.297 & 140.073 / 995.205 \\
 Mono-NN & 2.731 / 0.675 & 26.781 / 150.678 \\
-Mono-ORB & 167.833 / 9869.023 & 11465.348 / 105683372.243 \\
+Mono-ORB & 18.569 / 235.726 & 1039.846 / 708707.865 \\
 ============================================
 ============================================
 RPE LATEX TABLE
@@ -707,15 +703,15 @@ RPE LATEX TABLE
  & \textbf{7m} & \textbf{14m} & \textbf{21m} & \textbf{28m} & \textbf{35m} \\\hline
 Mono-KLT & 0.844 / 0.190 & 1.100 / 0.295 & 1.250 / 0.379 & 1.321 / 0.392 & 1.542 / 0.410 \\
 Mono-NN & 1.199 / 0.447 & 1.640 / 0.558 & 2.307 / 0.642 & 2.905 / 0.684 & 3.571 / 0.879 \\
-Mono-ORB & 15.383 / 1856.112 & 24.306 / 3665.818 & 33.224 / 5425.009 & 39.722 / 7135.530 & 46.585 / 9132.049 \\
+Mono-ORB & 2.160 / 53.749 & 3.973 / 101.843 & 4.797 / 144.931 & 4.959 / 187.199 & 5.042 / 231.932 \\
 ============================================
 
 ---------------------------------------------------------------------------------
-./eval_err.sh: line 127: 23945 Segmentation fault      (core dumped) rosrun ov_eval error_dataset posyaw ${SCRIPT_DIR}/../../../ov_data/euroc_mav/MH_04_difficult.txt ${SCRIPT_DIR}/exp_euroc/algorithms/
+./eval_err.sh: line 127: 1130390 Segmentation fault      (core dumped) rosrun ov_eval error_dataset posyaw ${SCRIPT_DIR}/../../../ov_data/euroc_mav/MH_04_difficult.txt ${SCRIPT_DIR}/exp_euroc/algorithms/
 Setting printing level to: INFO
 [COMP]: 22212 poses in MH_05_difficult => length of 97.59 meters
 [COMP]: 2122 poses in KLT => length of 98.61 meters
-./eval_err.sh: line 133: 23989 Segmentation fault      (core dumped) rosrun ov_eval plot_trajectories posyaw ${SCRIPT_DIR}/../../../ov_data/euroc_mav/MH_05_difficult.txt ${SCRIPT_DIR}/exp_euroc/algorithms/Mono-KLT/MH_05_difficult/KLT.txt
+./eval_err.sh: line 133: 1130453 Segmentation fault      (core dumped) rosrun ov_eval plot_trajectories posyaw ${SCRIPT_DIR}/../../../ov_data/euroc_mav/MH_05_difficult.txt ${SCRIPT_DIR}/exp_euroc/algorithms/Mono-KLT/MH_05_difficult/KLT.txt
 Setting printing level to: INFO
 [COMP]: 22212 poses in MH_05_difficult => length of 97.59 meters
 ======================================
@@ -735,7 +731,6 @@ Setting printing level to: INFO
 ======================================
 [COMP]: processing Mono-NN algorithm
 [TRAJ]: Trajectory is a bad ratio of 172.80 length (est 16864.00, gt 97.59)
-[TRAJ]: /home/ryan/Developer/catkin_ov/src/open_vins/ov_msckf/scripts/runs_oct4_23/exp_euroc/algorithms/Mono-NN/MH_05_difficult/NN.txt
         ATE: mean_ori = 123.365 | mean_pos = 4644.053 (1 runs)
         ATE: std_ori  = -nan | std_pos  = -nan
         ATE 2D: mean_ori = 118.658 | mean_pos = 4556.537 (1 runs)
@@ -750,20 +745,19 @@ Setting printing level to: INFO
         NEES: mean_ori = 12118.720 | mean_pos = 198525015.571
 ======================================
 [COMP]: processing Mono-ORB algorithm
-[TRAJ]: Trajectory is a bad ratio of 27.26 length (est 2660.39, gt 97.59)
-[TRAJ]: /home/ryan/Developer/catkin_ov/src/open_vins/ov_msckf/scripts/runs_oct4_23/exp_euroc/algorithms/Mono-ORB/MH_05_difficult/ORB.txt
-        ATE: mean_ori = 177.875 | mean_pos = 706.599 (1 runs)
+[TRAJ]: Trajectory is a bad ratio of 69.86 length (est 6817.84, gt 97.59)
+        ATE: mean_ori = 140.204 | mean_pos = 1867.107 (1 runs)
         ATE: std_ori  = -nan | std_pos  = -nan
-        ATE 2D: mean_ori = 177.778 | mean_pos = 706.438 (1 runs)
+        ATE 2D: mean_ori = 139.531 | mean_pos = 1853.817 (1 runs)
         ATE 2D: std_ori  = -nan | std_pos  = -nan
-        RPE: seg 7 - mean_ori = 3.124 | mean_pos = 148.344 (1934 samples)
-        RPE: seg 14 - mean_ori = 4.689 | mean_pos = 274.545 (1820 samples)
-        RPE: seg 21 - mean_ori = 7.162 | mean_pos = 377.443 (1670 samples)
-        RPE: seg 28 - mean_ori = 8.753 | mean_pos = 489.479 (1553 samples)
-        RPE: seg 35 - mean_ori = 9.954 | mean_pos = 658.322 (1497 samples)
-        RMSE: mean_ori = 175.178 | mean_pos = 587.704
-        RMSE 2D: mean_ori = 175.079 | mean_pos = 587.463
-        NEES: mean_ori = 11080.222 | mean_pos = 11290244.235
+        RPE: seg 7 - mean_ori = 2.290 | mean_pos = 388.500 (1937 samples)
+        RPE: seg 14 - mean_ori = 4.070 | mean_pos = 732.283 (1823 samples)
+        RPE: seg 21 - mean_ori = 6.013 | mean_pos = 1025.734 (1673 samples)
+        RPE: seg 28 - mean_ori = 7.568 | mean_pos = 1347.151 (1556 samples)
+        RPE: seg 35 - mean_ori = 8.886 | mean_pos = 1799.759 (1500 samples)
+        RMSE: mean_ori = 140.119 | mean_pos = 1567.370
+        RMSE 2D: mean_ori = 139.423 | mean_pos = 1556.389
+        NEES: mean_ori = 5630.422 | mean_pos = 47710373.976
 
 
 ============================================
@@ -772,7 +766,7 @@ ATE AND NEES LATEX TABLE
  & \textbf{ATE (deg/m)} & \textbf{NEES (deg/m)} \\\hline
 Mono-KLT & 1.361 / 0.389 & 44.774 / 30.661 \\
 Mono-NN & 123.365 / 4644.053 & 12118.720 / 198525015.571 \\
-Mono-ORB & 177.875 / 706.599 & 11080.222 / 11290244.235 \\
+Mono-ORB & 140.204 / 1867.107 & 5630.422 / 47710373.976 \\
 ============================================
 ============================================
 RPE LATEX TABLE
@@ -780,11 +774,11 @@ RPE LATEX TABLE
  & \textbf{7m} & \textbf{14m} & \textbf{21m} & \textbf{28m} & \textbf{35m} \\\hline
 Mono-KLT & 0.447 / 0.204 & 0.690 / 0.292 & 0.858 / 0.444 & 1.022 / 0.504 & 1.294 / 0.598 \\
 Mono-NN & 4.672 / 971.240 & 7.852 / 1823.289 & 10.907 / 2554.406 & 13.518 / 3353.360 & 15.862 / 4469.818 \\
-Mono-ORB & 3.124 / 148.344 & 4.689 / 274.545 & 7.162 / 377.443 & 8.753 / 489.479 & 9.954 / 658.322 \\
+Mono-ORB & 2.290 / 388.500 & 4.070 / 732.283 & 6.013 / 1025.734 & 7.568 / 1347.151 & 8.886 / 1799.759 \\
 ============================================
 
 ---------------------------------------------------------------------------------
-./eval_err.sh: line 139: 24043 Segmentation fault      (core dumped) rosrun ov_eval error_dataset posyaw ${SCRIPT_DIR}/../../../ov_data/euroc_mav/MH_05_difficult.txt ${SCRIPT_DIR}/exp_euroc/algorithms/
+./eval_err.sh: line 139: 1130503 Segmentation fault      (core dumped) rosrun ov_eval error_dataset posyaw ${SCRIPT_DIR}/../../../ov_data/euroc_mav/MH_05_difficult.txt ${SCRIPT_DIR}/exp_euroc/algorithms/
 Setting printing level to: INFO
 [COMP]: 36382 poses in MH_01_easy.txt => length of 80.63 meters
 [COMP]: 29993 poses in MH_02_easy.txt => length of 73.47 meters
@@ -800,44 +794,49 @@ Setting printing level to: INFO
 [COMP]: 22970 poses in V2_03_difficult.txt => length of 86.13 meters
 [COMP]: Mono-KLT dataset does not have any runs for MH_01_easy!!!!!
 [COMP]: Mono-KLT dataset does not have any runs for MH_02_easy!!!!!
+[COMP]: Mono-KLT dataset does not have any runs for MH_03_medium!!!!!
 [COMP]: Mono-KLT dataset does not have any runs for MH_04_difficult!!!!!
 [COMP]: Mono-KLT dataset does not have any runs for MH_05_difficult!!!!!
 [COMP]: Mono-KLT dataset does not have any runs for V1_01_easy_original!!!!!
-[COMP]: Mono-KLT dataset does not have any runs for V2_01_easy!!!!!
+[COMP]: Mono-KLT dataset does not have any runs for V2_03_difficult!!!!!
 [COMP]: Mono-NN dataset does not have any runs for MH_01_easy!!!!!
 [COMP]: Mono-NN dataset does not have any runs for MH_02_easy!!!!!
+[COMP]: Mono-NN dataset does not have any runs for MH_03_medium!!!!!
 [COMP]: Mono-NN dataset does not have any runs for MH_04_difficult!!!!!
 [COMP]: Mono-NN dataset does not have any runs for MH_05_difficult!!!!!
 [COMP]: Mono-NN dataset does not have any runs for V1_01_easy_original!!!!!
-[COMP]: Mono-NN dataset does not have any runs for V2_01_easy!!!!!
+[COMP]: Mono-NN dataset does not have any runs for V2_03_difficult!!!!!
 [COMP]: Mono-ORB dataset does not have any runs for MH_01_easy!!!!!
 [COMP]: Mono-ORB dataset does not have any runs for MH_02_easy!!!!!
+[COMP]: Mono-ORB dataset does not have any runs for MH_03_medium!!!!!
 [COMP]: Mono-ORB dataset does not have any runs for MH_04_difficult!!!!!
 [COMP]: Mono-ORB dataset does not have any runs for MH_05_difficult!!!!!
 [COMP]: Mono-ORB dataset does not have any runs for V1_01_easy_original!!!!!
-[COMP]: Mono-ORB dataset does not have any runs for V2_01_easy!!!!!
+[COMP]: Mono-ORB dataset does not have any runs for V2_03_difficult!!!!!
 ============================================
 ATE LATEX TABLE
 ============================================
  & \textbf{MH\_01\_easy} & \textbf{MH\_02\_easy} & \textbf{MH\_03\_medium} & \textbf{MH\_04\_difficult} & \textbf{MH\_05\_difficult} & \textbf{V1\_01\_easy} & \textbf{V1\_01\_easy\_original} & \textbf{V1\_02\_medium} & \textbf{V1\_03\_difficult} & \textbf{V2\_01\_easy} & \textbf{V2\_02\_medium} & \textbf{V2\_03\_difficult} & \textbf{Average} \\\hline
-Mono-KLT & - / - & - / - & 1.337 / 0.148 & - / - & - / - & 0.825 / 0.060 & - / - & 1.652 / 0.065 & 2.694 / 0.090 & - / - & 1.417 / 0.060 & 1.103 / 0.180 & 1.505 / 0.100 \\
-Mono-NN & - / - & - / - & 0.894 / 0.456 & - / - & - / - & 1.017 / 0.065 & - / - & 1.858 / 0.113 & 2.229 / 0.130 & - / - & 1.548 / 0.105 & 1.757 / 0.215 & 1.551 / 0.181 \\
-Mono-ORB & - / - & - / - & 0.852 / 0.324 & - / - & - / - & 1.221 / 0.131 & - / - & 1.790 / 0.133 & 3.737 / 0.126 & - / - & 1.890 / 0.165 & 1.774 / 0.314 & 1.878 / 0.199 \\
+Mono-KLT & - / - & - / - & - / - & - / - & - / - & 0.825 / 0.060 & - / - & 1.652 / 0.065 & 2.694 / 0.090 & 0.854 / 0.110 & 1.417 / 0.060 & - / - & 1.489 / 0.077 \\
+Mono-NN & - / - & - / - & - / - & - / - & - / - & 1.017 / 0.065 & - / - & 1.858 / 0.113 & 2.229 / 0.130 & 1.420 / 0.139 & 1.548 / 0.105 & - / - & 1.614 / 0.110 \\
+Mono-ORB & - / - & - / - & - / - & - / - & - / - & 1.165 / 0.129 & - / - & 1.802 / 0.136 & 3.724 / 0.137 & 1.367 / 0.130 & 1.982 / 0.167 & - / - & 2.008 / 0.140 \\
 ============================================
 ============================================
 ATE 2D LATEX TABLE
 ============================================
  & \textbf{MH\_01\_easy} & \textbf{MH\_02\_easy} & \textbf{MH\_03\_medium} & \textbf{MH\_04\_difficult} & \textbf{MH\_05\_difficult} & \textbf{V1\_01\_easy} & \textbf{V1\_01\_easy\_original} & \textbf{V1\_02\_medium} & \textbf{V1\_03\_difficult} & \textbf{V2\_01\_easy} & \textbf{V2\_02\_medium} & \textbf{V2\_03\_difficult} & \textbf{Average} \\\hline
-Mono-KLT & - / - & - / - & 1.289 / 0.143 & - / - & - / - & 0.709 / 0.054 & - / - & 1.610 / 0.059 & 2.616 / 0.076 & - / - & 1.092 / 0.055 & 0.673 / 0.166 & 1.332 / 0.092 \\
-Mono-NN & - / - & - / - & 0.799 / 0.449 & - / - & - / - & 0.947 / 0.059 & - / - & 1.813 / 0.107 & 2.140 / 0.126 & - / - & 1.290 / 0.083 & 1.121 / 0.196 & 1.352 / 0.170 \\
-Mono-ORB & - / - & - / - & 0.729 / 0.314 & - / - & - / - & 1.132 / 0.127 & - / - & 1.743 / 0.131 & 3.685 / 0.106 & - / - & 1.686 / 0.126 & 1.535 / 0.293 & 1.752 / 0.183 \\
+Mono-KLT & - / - & - / - & - / - & - / - & - / - & 0.709 / 0.054 & - / - & 1.610 / 0.059 & 2.616 / 0.076 & 0.491 / 0.055 & 1.092 / 0.055 & - / - & 1.304 / 0.060 \\
+Mono-NN & - / - & - / - & - / - & - / - & - / - & 0.947 / 0.059 & - / - & 1.813 / 0.107 & 2.140 / 0.126 & 1.154 / 0.093 & 1.290 / 0.083 & - / - & 1.469 / 0.094 \\
+Mono-ORB & - / - & - / - & - / - & - / - & - / - & 1.090 / 0.125 & - / - & 1.755 / 0.134 & 3.598 / 0.107 & 1.065 / 0.115 & 1.791 / 0.130 & - / - & 1.860 / 0.122 \\
 ============================================
 ============================================
 RPE LATEX TABLE
 ============================================
  & \textbf{8m} & \textbf{16m} & \textbf{24m} & \textbf{32m} & \textbf{40m} & \textbf{48m} \\\hline
-Mono-KLT & 0.733 / 0.097 & 0.863 / 0.118 & 0.980 / 0.126 & 1.111 / 0.155 & 1.220 / 0.152 & 1.395 / 0.180 \\
-Mono-NN & 0.970 / 0.141 & 1.198 / 0.166 & 1.352 / 0.201 & 1.389 / 0.245 & 1.487 / 0.288 & 1.573 / 0.340 \\
-Mono-ORB & 1.047 / 0.154 & 1.407 / 0.187 & 1.646 / 0.224 & 1.792 / 0.272 & 2.156 / 0.306 & 2.412 / 0.369 \\
+Mono-KLT & 0.796 / 0.086 & 0.930 / 0.104 & 1.095 / 0.115 & 1.201 / 0.122 & 1.249 / 0.115 & 1.458 / 0.121 \\
+Mono-NN & 1.069 / 0.117 & 1.368 / 0.135 & 1.572 / 0.148 & 1.659 / 0.163 & 1.647 / 0.171 & 1.704 / 0.183 \\
+Mono-ORB & 1.203 / 0.136 & 1.626 / 0.166 & 1.915 / 0.191 & 2.120 / 0.211 & 2.456 / 0.237 & 2.944 / 0.281 \\
 ============================================
-./eval_err.sh: line 148: 24086 Segmentation fault      (core dumped) rosrun ov_eval error_comparison posyaw ${SCRIPT_DIR}/../../../ov_data/euroc_mav/ ${SCRIPT_DIR}/exp_euroc/algorithms_filtered/
+^Cterminate called after throwing an instance of 'std::runtime_error'
+  what():  Call to show() failed.
+./eval_err.sh: line 148: 1130555 Aborted                 (core dumped) rosrun ov_eval error_comparison posyaw ${SCRIPT_DIR}/../../../ov_data/euroc_mav/ ${SCRIPT_DIR}/exp_euroc/algorithms_filtered/
