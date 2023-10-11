@@ -6,13 +6,12 @@ It features **SuperPoint** and **SuperGlue** in the tracking frontend. Currently
 
 ## Main Results
 
+[[Youtube](https://www.youtube.com/watch?v=mdyeqTD0WfA)] [[More results and analysis](https://ryan-lyq.notion.site/OV-Result-Analysis-d4df645c6ecf4562a5802420013b001d?pvs=4)]
+[Report (TODO)]
+
 ![](./ov_msckf/scripts/runs_oct4_23/eval_save/err_fig/RPE_overview.png)
 
 ![](./ov_msckf/scripts/runs_oct4_23/eval_save/err.png)
-
-```sh
-# TODO: add comments, table caption, link to final report
-```
 
 ## Env Setup & Compilation
 
