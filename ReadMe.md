@@ -7,11 +7,20 @@ It features **SuperPoint** and **SuperGlue** in the tracking frontend. Currently
 ## Main Results
 
 [[Youtube](https://www.youtube.com/watch?v=mdyeqTD0WfA)] [[More results and analysis](https://ryan-lyq.notion.site/OV-Result-Analysis-d4df645c6ecf4562a5802420013b001d?pvs=4)]
-[Report (TODO)]
+[[Report](https://www.overleaf.com/read/nhxpbrzymgrd)]
 
 ![](./ov_msckf/scripts/runs_oct4_23/eval_save/err_fig/RPE_overview.png)
 
 ![](./ov_msckf/scripts/runs_oct4_23/eval_save/err.png)
+
+The application of SuperPoint and SuperGlue in the front-end of OpenVINS for feature tracking may not be the most effective approach:
+
+* Addressing the issue of tracked key points being lost proves challenging, as SuperGlue lacks the granularity for per-feature matching.
+* Even with TensorRT optimization, executing two deep neural networks remains resource-intensive for robots with constrained computational resources. Furthermore, there is no discernible improvement in estimation accuracy, even on difficult sequences with motion blur in the frames.
+* While SuperPoint and SuperGlue may enhance the front-end's robustness to illumination changes, it's worth noting that the IMU already partially compensates for degraded visual perception.
+* SuperPoint and SuperGlue excel in wide baseline pose estimation tasks, but for frame-to-frame tracking, their advantages may not be as pronounced.
+
+To fully leverage the potential of SuperPoint and SuperGlue in the visual front-end of a modern pose estimation system, it may be more advantageous to use ORB-SLAM as the foundational codebase. This approach, although requiring the development of new visual vocabularies and dealing with a more complex code structure, could be more effective. ORB-SLAM employs a more intricate algorithm for handling key points and associating them with map points or landmarks. Additionally, it appears to rely more on the frame-to-model matching strategy, which mitigates the risk of losing track of stable key points and may better exploit the properties of SuperPoint and SuperGlue. By using SuperPoint and SuperGlue, ORB-SLAM3's [issues](https://arxiv.org/abs/2107.07589) on the TUM-RGBD sequences may be solved.
 
 ## Env Setup & Compilation
 
