@@ -40,7 +40,7 @@ mamba install compilers cmake pkg-config make ninja colcon-common-extensions cat
 # they are not needed to use with the python wrapper version of SuperGlueCpp
 mamba install pytorch=2.0.1 torchvision pytorch-cuda=11.8 cuda-toolkit=11.8 cuda-nvcc=11.8 -c pytorch -c nvidia -y
 # use older version of mkl (https://github.com/pytorch/pytorch/issues/123097)
-mamba install mamba install mkl=2024.0.0 -y
+mamba install mkl=2024.0.0 -y
 ```
 
 Clone me recursively.
